@@ -11,6 +11,13 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
+      name:"about",
+      path:"/about",
+      component: function () {
+        return import(/* webpackChunkName: "coupon" */ '@/views/About.vue')
+      }
+    },
+    {
       name:"home",
       path:"/home",
       component: Home
