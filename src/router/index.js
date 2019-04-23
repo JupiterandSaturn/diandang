@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import AboutUs from '../views/aboutUs/index.vue'
+import ConfigurationSelection from '../views/ConfigurationSelection/index.vue'
+import Evaluation from '../views/Evaluation/index.vue'
 import Home from '../components/homepage/index.vue'
+
 
 
 Vue.use(Router)
@@ -47,5 +50,19 @@ export default new Router({
         return import(/* webpackChunkName: "account" */ '@/views/Account.vue')
       }
     },
+    {
+      path: '/ConfigurationSelection',
+      name: 'ConfigurationSelection',
+      component: function () {
+        return import(/* webpackChunkName: "account" */ '@/views/ConfigurationSelection/index.vue')
+      }
+    },
+      {
+      path:'/Evaluation',
+      name:'Evaluation',
+      component:function () {
+          return import( '@/views/Evaluation/index.vue')
+      }
+      }
   ]
 })
