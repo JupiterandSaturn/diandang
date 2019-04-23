@@ -6,6 +6,8 @@
       <router-link to="/coupon">Coupon</router-link>|
       <router-link to="/Account">Account</router-link>|
       <router-link to="/aboutUs">aboutUs</router-link>|
+      <router-link to="/ConfigurationSelection">ConfigurationSelection</router-link>|
+      <router-link to="/Evaluation">Evaluation</router-link>|
       <router-link to="/home">home</router-link>
     </div>
     <router-view/>
