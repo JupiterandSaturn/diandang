@@ -10,6 +10,7 @@
                   <span>￥&nbsp;0.00</span>
                   <button >提现</button>
               </p>
+<<<<<<< HEAD
             </div>
               <hr>
               <div id="detail_top_right">
@@ -25,6 +26,16 @@
                       <el-table-column></el-table-column>
                   </accountTable>
               </div>
+=======
+          </div>
+          <div id="detail_top_left">
+              <h5>待入账金额</h5>
+              <p>
+                  <span>￥&nbsp;0.00</span>
+                  <button >提现</button>
+              </p>
+          </div>
+>>>>>>> 1c9f3cf81009ec634f80b346fb23b1a399765fde
 
           </div>
 
@@ -40,15 +51,22 @@
 <script>
 import pageTop from    '@/components/currency/page-top.vue'
 import pageBottom from '@/components/currency/page-bottom.vue'
+<<<<<<< HEAD
 import accountTable from '@/components/account/table.vue'
+=======
+>>>>>>> 1c9f3cf81009ec634f80b346fb23b1a399765fde
 
 
 export default {
   name:"account",
   components :{
     pageTop,
+<<<<<<< HEAD
     pageBottom,
       accountTable
+=======
+    pageBottom
+>>>>>>> 1c9f3cf81009ec634f80b346fb23b1a399765fde
   }
 }
 </script>
@@ -105,6 +123,7 @@ li,dt,dd{
         @include widhei(88.85%,72.58%);
         margin-top:113px;
         background:#fff;
+<<<<<<< HEAD
           #detail_top_left{
               float:left;
               @include widhei(540px,294px);
@@ -159,6 +178,8 @@ li,dt,dd{
               color:#707070;
               height:1px;
           }
+=======
+>>>>>>> 1c9f3cf81009ec634f80b346fb23b1a399765fde
       }
     }
   }
