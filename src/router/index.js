@@ -19,7 +19,26 @@ export default new Router({
       name:"aboutUs",
     path:"/aboutUs",
     component: AboutUs
-    }
-    
+    },
+	{
+      path: '/coupon',
+      name: 'coupon',
+      // route level code-splitting
+      // this generates a separate chunk (coupon.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: function () { 
+        return import(/* webpackChunkName: "coupon" */ '@/views/Coupon.vue')
+      }
+    },
+    {
+      path: '/account',
+      name: 'account',
+      // route level code-splitting
+      // this generates a separate chunk (coupon.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: function () { 
+        return import(/* webpackChunkName: "account" */ '@/views/Account.vue')
+      }
+    },
   ]
 })
