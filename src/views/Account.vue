@@ -3,8 +3,22 @@
   <pageTop></pageTop>
   <div id="content">
       <div id="content_center">
-          <div id="picture">
-            
+          <div id="content_detail">
+            <div id="detail_top_left">
+              <h5>账户余额</h5>
+              <p>
+                  <span>￥&nbsp;0.00</span>
+                  <button >提现</button>
+              </p>
+          </div>
+          <div id="detail_top_left">
+              <h5>待入账金额</h5>
+              <p>
+                  <span>￥&nbsp;0.00</span>
+                  <button >提现</button>
+              </p>
+          </div>
+
           </div>
 
 
@@ -78,7 +92,7 @@ li,dt,dd{
       margin:18px;
       background:#e7e7e7;
       overflow: hidden;
-      #picture{
+      #content_detail{
         @include widhei(88.85%,72.58%);
         margin-top:113px;
         background:#fff;
