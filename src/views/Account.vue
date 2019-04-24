@@ -22,7 +22,7 @@
                     <div id="detail_bottom">
                         <h5>账户资产明细</h5>
                         <accountTable>
-                            <el-table-column></el-table-column>
+                                <el-table-column></el-table-column>
                         </accountTable>
                     </div>
                 </div>
@@ -103,7 +103,7 @@
                 background:#fff;
                 #detail_top_left{
                     float:left;
-                    @include widhei(540px,294px);
+                    @include widhei(440px,294px);
                     padding-left:100px;
                     h5{
                         text-align: left;
@@ -134,7 +134,7 @@
                 }
                 #detail_top_right{
                     float:left;
-                    @include widhei(540px,294px);
+                    @include widhei(440px,294px);
                     padding-left:100px;
                     h5{
                         text-align: left;
