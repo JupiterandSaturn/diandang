@@ -27,7 +27,6 @@
                 <li><a href="#">摄影摄像回收</a> </li>
                 <li><a href="#">智能数码回收</a> </li>
             </ul>
-            <h1>个人卡券</h1>
         </div>
 
     </div>
@@ -89,11 +88,11 @@ li,dt,dd{
       @include widhei(100%,null);
       #pageTop_top_left{
         float:left;
-        width:350px;
+        width:308px;
         p:first-of-type{
-          padding:28px 0 86px 50px;
+          padding:24.62px 0 76px 44px;
           a{
-            &:first-of-type{padding-right:52px;}
+            &:first-of-type{padding-right:45.76px;}
             font-size:14px;
             color:#e5dfd9;
           }
@@ -101,25 +100,25 @@ li,dt,dd{
 
       }
       #pageTop_top_right{
-        padding-top:20px;
+        padding-top:18px;
         float:right;
-        width:414px;
+        width:364px;
         img{
-          @include widhei(38px,38px);
+          @include widhei(34px,34px);
           float: right;
-          margin:0 39px 0 50px;
+          margin:0 34px 0 50px;
         }
         ul{
-          @include widhei(null,50px);
+          @include widhei(null,44px);
           li{
             float:right;
-            padding-left:76px;
+            padding-left:66px;
             &:last-of-type{
               padding-left:0;
             }
             a:before{
-              width:16px;
-              padding-right:8px;
+              width:14px;
+              padding-right:7px;
             }
             &:first-of-type{
               a:before{
@@ -135,29 +134,29 @@ li,dt,dd{
             }
             a{
               float:right;
-              @include fontSizCol(14px,#e5dfd9,39px);
+              @include fontSizCol(12px,#e5dfd9,34px);
             }
           }
         }
       }
       #pageTop_top_center{
-        @include widhei(640px,null);
         overflow: hidden;
+          width:auto;
           &>p{
-            @include  widhei(213px,52px);
+            @include  widhei(187px,45.76px);
             background:#d4cec9;
-            font-size:20px;
-            line-height:52px;
+            font-size:16px;
+            line-height:45.76px;
             text-align: center;
-            margin-top:20px;
+            margin-top:16px;
           }
         &>ul{
           overflow: hidden;
-          padding-top:20px;
-          padding-bottom:94px;
-          @include widhei(100%,null);
+          padding-top:18px;
+          @include widhei(588px,null);
           li{
-            padding-right:52px;
+
+            padding-right:38px;
             a{
               @include fontSizCol(16px,#f8f7f4,null);
             }
@@ -165,14 +164,6 @@ li,dt,dd{
               padding-right:0px;
             }
           }
-        }
-        h1{
-          //@include widhei(36px,#ffffff,null);
-          font-size:36px;
-          text-align:center;
-          font-weight:normal;
-          color:#ffffff;
-
         }
       }
     }

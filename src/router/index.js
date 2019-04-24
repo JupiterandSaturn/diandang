@@ -69,11 +69,25 @@ export default new Router({
       }
     },
       {
-      path:'/Evaluation',
-      name:'Evaluation',
+        path:'/Evaluation',
+        name:'Evaluation',
+        component:function () {
+            return import( '@/views/Evaluation/index.vue')
+        }
+      },
+    {
+      path:'/personalInformation',
+      name:'personalInformation',
       component:function () {
-          return import( '@/views/Evaluation/index.vue')
+        return import( '@/views/personalInformation.vue')
       }
+    },
+    {
+      path:'/orderInformation',
+      name:'orderInformation',
+      component:function () {
+        return import( '@/views/OrderInformation.vue')
       }
+    }
   ]
 })
