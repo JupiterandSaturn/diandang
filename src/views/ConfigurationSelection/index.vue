@@ -12,6 +12,10 @@
                         </div>
                     </div>
                     <div class="bannerRight">
+                        <ul>
+                            <li><Choose1/></li>
+                            <li><Choose2/></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -22,7 +26,8 @@
 
 <script>
     import Head from '../../common/head'
-
+    import Choose1 from '../../components/choose/choose-one'
+    import Choose2 from '../../components/choose/choose-two'
     import Foot from '../../common/foot'
 
     export default {
@@ -34,8 +39,8 @@
         },
         components: {
             Head,
-
-
+            Choose1,
+            Choose2,
             Foot
         }
     }
@@ -102,11 +107,27 @@
                     float: left;
                     width: 521px;
                     height:521px;
-                    background: #000;
                     margin-top:132px;
                     margin-left: 310px;
+                    .el-select{
+                        width:520px;
+                    }
                 }
             }
         }
     }
+    .el-select-dropdown{
+        background:#E3E3E3 ;
+        .el-scrollbar{
+            .el-select-dropdown__item{
+                width: 520px;
+                height: 50px;
+                background: #000;
+                color: #fff;
+                text-align: center;
+                margin: 10px 0;
+            }
+        }
+    }
+
 </style>
