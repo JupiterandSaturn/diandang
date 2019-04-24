@@ -25,15 +25,11 @@
                             <el-table-column></el-table-column>
                         </accountTable>
                     </div>
-
                 </div>
-
-
             </div>
         </div>
         <pageBottom></pageBottom>
     </div>
-
 </template>
 
 

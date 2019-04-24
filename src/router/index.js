@@ -1,15 +1,25 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import AboutUs from '../views/aboutUs/index.vue'
-import Login from '@/views/Login.vue'
+import ConfigurationSelection from '../views/ConfigurationSelection/index.vue'
+import Evaluation from '../views/Evaluation/index.vue'
 import Home from '../components/homepage/index.vue'
+import Login from '@/views/Login.vue'
 import OrderPerson from "@/views/OrderPerson.vue"
+
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+    {
+      name:"about",
+      path:"/about",
+      component: function () {
+        return import(/* webpackChunkName: "coupon" */ '@/views/About.vue')
+      }
+    },
     {
       name:"home",
       path:"/home",
@@ -30,7 +40,7 @@ export default new Router({
       path:"/orderperson",
       component:OrderPerson
     },
-  
+
     {
       path: '/coupon',
       name: 'coupon',
@@ -51,6 +61,19 @@ export default new Router({
         return import(/* webpackChunkName: "account" */ '@/views/Account.vue')
       }
     },
-    
+    {
+      path: '/ConfigurationSelection',
+      name: 'ConfigurationSelection',
+      component: function () {
+        return import(/* webpackChunkName: "account" */ '@/views/ConfigurationSelection/index.vue')
+      }
+    },
+      {
+      path:'/Evaluation',
+      name:'Evaluation',
+      component:function () {
+          return import( '@/views/Evaluation/index.vue')
+      }
+      }
   ]
 })
