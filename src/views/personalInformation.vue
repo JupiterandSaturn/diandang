@@ -115,7 +115,7 @@
                             float:left;
                             &:first-of-type{
                                 height:42px;
-                                margin-top:8px;
+                                margin-top:4px;
                                 display: block;
                                 @include widhei(34px,34px);
                                 -webkit-border-radius: 50%;

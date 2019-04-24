@@ -85,7 +85,8 @@ li,dt,dd{
     background:#1B1B1B;
     background-size: auto;
     #pageTop_top{
-      @include widhei(100%,null);
+        overflow: hidden;
+        @include widhei(100%,null);
       #pageTop_top_left{
         float:left;
         width:308px;
@@ -140,8 +141,7 @@ li,dt,dd{
         }
       }
       #pageTop_top_center{
-        overflow: hidden;
-          width:auto;
+          /*width:auto;*/
           &>p{
             @include  widhei(187px,45.76px);
             background:#d4cec9;
@@ -149,9 +149,10 @@ li,dt,dd{
             line-height:45.76px;
             text-align: center;
             margin-top:16px;
+
           }
         &>ul{
-          overflow: hidden;
+          /*overflow: hidden;*/
           padding-top:18px;
           @include widhei(588px,null);
           li{
