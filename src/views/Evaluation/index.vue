@@ -35,9 +35,9 @@
 </template>
 
 <script>
-    import Head from '../../common/head'
+    import Head from '@/components/currency/page-top-min.vue'
 
-    import Foot from '../../common/foot'
+    import Foot from '@/components/currency/page-bottom.vue'
 
     export default {
         name: 'evaluation',
