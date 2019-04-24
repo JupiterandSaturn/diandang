@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <HomePage/>
-     <div id="nav">
+
+<!--     <div id="nav">-->
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>|
       <router-link to="/coupon">Coupon</router-link>|
@@ -12,8 +12,9 @@
       <router-link to="/home">home</router-link>
          <router-link to="/login">Login</router-link>|
          <router-link to="/orderperson">个人订单</router-link>|
-    </div>
-    <router-view/>
+      <HomePage/>
+<!--    </div>-->
+<!--    <router-view/>-->
   </div>
 </template>
 
