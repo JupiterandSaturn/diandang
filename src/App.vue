@@ -11,7 +11,9 @@
       <router-link to="/Evaluation">Evaluation</router-link>|
       <router-link to="/home">home</router-link>
          <router-link to="/login">Login</router-link>|
-         <router-link to="/orderperson">个人订单</router-link>|
+      <router-link to="/orderperson">个人订单</router-link>|
+      <router-link to="/personalInformation">个人信息</router-link>|
+      <router-link to="/orderInformation">订单信息</router-link>|
       <HomePage/>
 <!--    </div>-->
 <!--    <router-view/>-->

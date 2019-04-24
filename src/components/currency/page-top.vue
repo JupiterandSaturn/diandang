@@ -90,14 +90,15 @@ li,dt,dd{
     background:url("../../assets/coupon/top.png") ;
     background-size: auto;
     #pageTop_top{
+			overflow: hidden;
       @include widhei(100%,null);
       #pageTop_top_left{
         float:left;
-        width:350px;
+         width:308px;
         p:first-of-type{
-          padding:28px 0 86px 50px;
+          padding:24.62px 0 76px 44px;
           a{
-            &:first-of-type{padding-right:52px;}
+            &:first-of-type{padding-right:45.76px;}
             font-size:14px;
             color:#e5dfd9;
           }
@@ -162,7 +163,7 @@ li,dt,dd{
       }
       #pageTop_top_center{
         @include widhei(640px,null);
-        overflow: hidden;
+        // overflow: hidden;
           &>p{
             @include  widhei(213px,52px);
             background:#d4cec9;
