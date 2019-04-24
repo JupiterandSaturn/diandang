@@ -67,11 +67,12 @@ li,dt,dd{
   @include widhei(100%,294px);
   background:#1b1b1b;
   padding-top:88px;
-  #bottom_true{
-    @include  widhei(1285px,null);
     overflow: hidden;
+
+    #bottom_true{
+    @include  widhei(1200px,null);
     p:first-of-type{
-      @include widhei(47px,47px);
+      @include widhei(40px,40px);
       background:#cecbcb;
       float:left;
     }

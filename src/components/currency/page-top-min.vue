@@ -81,12 +81,12 @@ li,dt,dd{
 
 
   #page_top{
-    @include widhei(100%,133px);
+    @include widhei(null,133px);
     background:#1B1B1B;
-    background-size: auto;
+
     #pageTop_top{
         overflow: hidden;
-        @include widhei(100%,null);
+        @include widhei(null,null);
       #pageTop_top_left{
         float:left;
         width:308px;
@@ -141,7 +141,7 @@ li,dt,dd{
         }
       }
       #pageTop_top_center{
-          /*width:auto;*/
+
           &>p{
             @include  widhei(187px,45.76px);
             background:#d4cec9;
@@ -152,11 +152,9 @@ li,dt,dd{
 
           }
         &>ul{
-          /*overflow: hidden;*/
           padding-top:18px;
           @include widhei(588px,null);
           li{
-
             padding-right:38px;
             a{
               @include fontSizCol(16px,#f8f7f4,null);
