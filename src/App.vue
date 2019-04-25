@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+<<<<<<< HEAD
 
 <!--     <div id="nav">-->
       <router-link to="/">Home</router-link> |
@@ -17,21 +18,25 @@
       <HomePage/>
 <!--    </div>-->
 <!--    <router-view/>-->
+=======
+    <router-view></router-view>
+>>>>>>> g
   </div>
 </template>
 
 <script>
+<<<<<<< HEAD
 
 import HomePage from './components/homepage/index'
+=======
+>>>>>>> g
 
 export default {
-  name: 'app',
-  components: {
-    HomePage
-  }
+  name: 'app'
 }
 </script>
 
+<<<<<<< HEAD
 
 <style lang="scss">
   #app {
@@ -52,3 +57,7 @@ export default {
     }
   }
 </style>
+=======
+<style lang="scss">
+</style>
+>>>>>>> g
