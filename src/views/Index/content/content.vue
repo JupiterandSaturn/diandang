@@ -1,5 +1,5 @@
 <template>
-  <el-carousel indicator-position="outside">
+  <el-carousel indicator-position="none">
     <el-carousel-item v-for="(item,index) in pic" :key="index" >
       <h3><img :src="item"/></h3>
     </el-carousel-item>

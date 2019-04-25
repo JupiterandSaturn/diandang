@@ -4,6 +4,7 @@
         <Content></Content>
         <Middle></Middle>
         <Nav></Nav>
+        <Section></Section>
         <Foot></Foot>
     </div>
 </template>
@@ -12,6 +13,7 @@
 import Content from './content/content.vue'
 import Middle from './middle/middle.vue'
 import Nav from './nav/nav.vue'
+import Section from './section/index.vue'
 import Foot from '@/common/foot/index.vue'
 
 
@@ -22,6 +24,7 @@ export default {
          Content,
          Middle,
          Nav,
+         Section,
          Foot
      }
 }
