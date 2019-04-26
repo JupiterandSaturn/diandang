@@ -42,15 +42,15 @@ export default {
            }
         }
 </script>
-<style>
+<style scope>
 .middle ul .two{
-        width:18px;
-        height:18px;
-        background:rgba(255,255,255,1);
-        opacity:1; 
-        margin-left:33px;
-        margin-top:55px;
-        } 
+                    width:18px;
+                    height:18px;
+                    background:rgba(255,255,255,1);
+                    opacity:1; 
+                    margin-left:33px;
+                    margin-top:55px;
+                    } 
 .middle .nav{
                 width:219px;
                 height:324px;
@@ -70,37 +70,37 @@ export default {
                     margin-top:74px;
                     } 
 .middle ul .mid_1{
-                                    width:90px;
-                                    height:19px;
-                                    font-size:14px;
-                                    font-family:Microsoft YaHei;
-                                    font-weight:400;
-                                    line-height:19px;
-                                    color:rgba(135,135,135,1);
-                                    opacity:1;
-                                  } 
+                    width:90px;
+                    height:19px;
+                    font-size:14px;
+                    font-family:Microsoft YaHei;
+                    font-weight:400;
+                    line-height:19px;
+                    color:rgba(135,135,135,1);
+                    opacity:1;
+                } 
 .middle ul .mid_2{
-                                        width:94px;
-                                        height:19px;
-                                        font-size:14px;
-                                        font-family:Microsoft YaHei;
-                                        font-weight:400;
-                                        line-height:19px;
-                                        color:rgba(135,135,135,1);
-                                        opacity:1;
-                                        } 
+                    width:94px;
+                    height:19px;
+                    font-size:14px;
+                    font-family:Microsoft YaHei;
+                    font-weight:400;
+                    line-height:19px;
+                    color:rgba(135,135,135,1);
+                    opacity:1;
+                    } 
 .middle ul .mid_3{
-                                        width:28px;
-                                        height:19px;
-                                        font-size:14px;
-                                        font-family:Microsoft YaHei;
-                                        font-weight:400;
-                                        line-height:19px;
-                                        color:rgba(5,5,5,1);
-                                        opacity:1;
-                                        display: inline-block;
-                                        margin-top:119px;
-                                      }
+                    width:28px;
+                    height:19px;
+                    font-size:14px;
+                    font-family:Microsoft YaHei;
+                    font-weight:400;
+                    line-height:19px;
+                    color:rgba(5,5,5,1);
+                    opacity:1;
+                    display: inline-block;
+                    margin-top:119px;
+                }
 .middle ul .mid_4{
                     width:28px;
                     height:19px;
@@ -137,13 +137,13 @@ export default {
                                         opacity:1;
                                     }                          
 .middle .sp2{
-                    display: inline-block;
-                    width:0px;
-                    height:85px;
-                    border:1px solid rgba(200,200,200,1);
-                    opacity:1;
-                    margin-left:183px;
-                    margin-top:66px;
+                display: inline-block;
+                width:0px;
+                height:85px;
+                border:1px solid rgba(200,200,200,1);
+                opacity:1;
+                margin-left:183px;
+                margin-top:66px;
                 }
 .middle .sp3{
                 display: inline-block;
@@ -157,5 +157,5 @@ export default {
                 opacity:1;
                 margin-left:80px;
                 margin-top:72px;
-                    } 
+            } 
 </style>

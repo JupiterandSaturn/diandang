@@ -27,7 +27,7 @@ export default {
 
 }
 </script>
-<style>
+<style scope>
 .rg_top .one{
                 width:340px;
                 height:61px;

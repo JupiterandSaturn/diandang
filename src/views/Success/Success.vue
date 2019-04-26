@@ -8,16 +8,16 @@
 
 <script>
 import Central from './central'
+
 export default {
                 components:{
                 
-                    Central,
-                
-                }
+                    Central
+                        }
 }
 </script>
 
-<style>
+<style scope>
 *{
     margin:0;
     padding:0

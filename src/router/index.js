@@ -12,8 +12,13 @@ import Shopcar from '../views/shopcar/shopcar.vue'
 import Home from '../components/homepage/index.vue'
 import Index from '../views/Index/index.vue'
 import Success from '../views/Success/Success.vue'
+<<<<<<< .merge_file_a05400
 
 >>>>>>> g
+=======
+import Second from '../views/Second/index.vue'
+import Third from '../views/third/index.vue'
+>>>>>>> .merge_file_a09232
 
 Vue.use(Router)
 
@@ -123,6 +128,16 @@ export default new Router({
       path:'/success',
       component:Success
     },
+    {
+      name:'Second',
+      path:'/second',
+      component:Second
+    },
+    {
+      name:'Third',
+      path:'/third',
+      component:Third
+    }
     ]
 >>>>>>> g
 })

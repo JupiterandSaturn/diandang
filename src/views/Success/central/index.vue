@@ -24,7 +24,7 @@ export default {
     name:'central'
 }
 </script>
-<style >
+<style scope>
 
 /* .central{
       width:100%;
