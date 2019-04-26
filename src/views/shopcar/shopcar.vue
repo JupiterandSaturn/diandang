@@ -7,7 +7,7 @@
     </div>
 </template>
 
-<script>
+<script scope>
 import Left from './left/left.vue'
 import Right from './right/right.vue'
 
@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scope>
 *{
     margin:0;
     padding:0;

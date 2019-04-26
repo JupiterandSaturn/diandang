@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scope>
 .main_left{
                  width:859px;
                  height:925px;

@@ -32,7 +32,7 @@ export default {
     
 }
 </script>
-<style scope>
+<style less='' scope>
    .nav{
             width:1330px;
             height:675px;

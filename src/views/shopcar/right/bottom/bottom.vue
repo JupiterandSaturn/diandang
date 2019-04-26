@@ -22,7 +22,7 @@ export default {
     name:'bottom',
             }
 </script>
-<style>
+<style scope>
 .rg_btm .one{
                           width:399px;
                           height:67px;

@@ -18,7 +18,7 @@
   </div>
 </template>
 
-<<script>
+<script>
 export default {
       data(){
           return{
@@ -58,7 +58,7 @@ export default {
 
 </script>
 
-<style>
+<style scope>
  .el-popover{
              width:600px;
              height:300px;

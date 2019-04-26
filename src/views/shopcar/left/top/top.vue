@@ -13,7 +13,7 @@ export default {
                 name:'top',
               }
 </script>
-<style>
+<style scope>
 .top input{
             margin-left:33px;
             margin-top:55px;
