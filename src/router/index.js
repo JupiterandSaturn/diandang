@@ -1,24 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import AboutUs from '../views/aboutUs/index.vue'
-<<<<<<< HEAD
 import ConfigurationSelection from '../views/ConfigurationSelection/index.vue'
 import Evaluation from '../views/Evaluation/index.vue'
-import Home from '../components/homepage/index.vue'
+// import Home from '../components/homepage/index.vue'
 import Login from '@/views/Login.vue'
 import OrderPerson from "@/views/OrderPerson.vue"
-=======
 import Shopcar from '../views/shopcar/shopcar.vue'
-import Home from '../components/homepage/index.vue'
 import Index from '../views/Index/index.vue'
 import Success from '../views/Success/Success.vue'
-<<<<<<< .merge_file_a05400
-
->>>>>>> g
-=======
-import Second from '../views/Second/index.vue'
-import Third from '../views/third/index.vue'
->>>>>>> .merge_file_a09232
 
 Vue.use(Router)
 
@@ -27,22 +17,16 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-<<<<<<< HEAD
       name:"about",
       path:"/about",
       component: function () {
         return import(/* webpackChunkName: "coupon" */ '@/views/About.vue')
       }
-=======
+    },
+    {
       name:"index",
       path:"/index",
       component: Index
->>>>>>> g
-    },
-    {
-      name:"home",
-      path:"/home",
-      component: Home
     },
     {
       name:"login",
@@ -51,7 +35,6 @@ export default new Router({
     },
     {
       name:"aboutUs",
-<<<<<<< HEAD
     path:"/aboutUs",
     component: AboutUs
     },
@@ -108,11 +91,13 @@ export default new Router({
       component:function () {
         return import( '@/views/OrderInformation.vue')
       }
-    }
-  ]
-=======
-      path:"/aboutUs",
-      component: AboutUs
+    },
+    {
+      path:'/form',
+      name:'form',
+      component:function () {
+        return import( '@/views/form.vue')
+      }
     },
     {
       name:"shopcar",
@@ -128,16 +113,5 @@ export default new Router({
       path:'/success',
       component:Success
     },
-    {
-      name:'Second',
-      path:'/second',
-      component:Second
-    },
-    {
-      name:'Third',
-      path:'/third',
-      component:Third
-    }
-    ]
->>>>>>> g
+  ]
 })

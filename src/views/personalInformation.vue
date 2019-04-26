@@ -44,7 +44,6 @@
                         <el-radio v-model="radio_coupon" label="2" >使用优惠券</el-radio>
                         
                     </div>
-                    
                 </div>
                 <div id="content_center_right">
                     <div id="con_cen_rig_top">
