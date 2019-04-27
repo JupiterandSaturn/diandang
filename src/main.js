@@ -12,6 +12,12 @@ Vue.config.productionTip = false;
 Vue.use(ElementUI);
 Vue.prototype.$axios = axios;
 
+axios.interceptors.request.use(config=>{
+  config.url="/diandang" + config.url;
+  return config;
+})
+
+
 // import round from 'components/round.vue'
 
 new Vue({

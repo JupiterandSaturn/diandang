@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import ConfigurationSelection from './ConfigurationSelection'
+import OrderInformation from './OrderInformation'
 
 Vue.use(Vuex)
 
@@ -15,6 +16,7 @@ export default new Vuex.Store({
 
   },
   modules:{
-    ConfigurationSelection
+    ConfigurationSelection,
+    OrderInformation,
   }
 })

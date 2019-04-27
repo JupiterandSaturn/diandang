@@ -13,8 +13,11 @@
       <router-link to="/personalInformation">个人信息</router-link>|
       <router-link to="/orderInformation">订单信息</router-link>|
       <router-link to="/form">来自</router-link>|
+      <router-link to="/second">二级菜单</router-link>|
+      <router-link to="/third">三级菜单</router-link>|
 
-    <router-view/>
+
+      <router-view/>
   </div>
 </template>
 

@@ -7,7 +7,7 @@ import Evaluation from '../views/Evaluation/index.vue'
 import Login from '@/views/Login.vue'
 import OrderPerson from "@/views/OrderPerson.vue"
 import Shopcar from '../views/shopcar/shopcar.vue'
-import Index from '../views/Index/index.vue'
+import index from '@/views/Index/index.vue'
 import Success from '../views/Success/Success.vue'
 
 Vue.use(Router)
@@ -26,7 +26,7 @@ export default new Router({
     {
       name:"index",
       path:"/index",
-      component: Index
+      component: index
     },
     {
       name:"login",
@@ -51,7 +51,7 @@ export default new Router({
       // this generates a separate chunk (coupon.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: function () { 
-        return import(/* webpackChunkName: "coupon" */ '@/views/Coupon.vue')
+        return import(/* webpackChunkName: "coupon" */ '@/views/coupon')
       }
     },
     {
@@ -61,7 +61,7 @@ export default new Router({
       // this generates a separate chunk (coupon.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: function () { 
-        return import(/* webpackChunkName: "account" */ '@/views/Account.vue')
+        return import(/* webpackChunkName: "account" */ '@/views/Account')
       }
     },
     {
@@ -89,7 +89,7 @@ export default new Router({
       path:'/orderInformation',
       name:'orderInformation',
       component:function () {
-        return import( '@/views/OrderInformation.vue')
+        return import( '@/views/OrderInformation')
       }
     },
     {
@@ -113,5 +113,28 @@ export default new Router({
       path:'/success',
       component:Success
     },
+    {
+      path: '/second',
+      name: 'second',
+      component: function () {
+        return import( '@/views/Second')
+      }
+    },
+    {
+      path: '/shopcar',
+      name: 'shopcar',
+      component: function () {
+        return import( '@/views/shopcar/shopcar.vue')
+      }
+    },
+    {
+      path: '/third',
+      name: 'third',
+      component: function () {
+        return import( '@/views/third')
+      }
+    },
+
+
   ]
 })
