@@ -20,10 +20,12 @@
         </div>
         <div id="pageTop_top_center">
             <p>公司名称</p>
-            <ul >
-                <li v-for=" i in $store.state.typeName"><a href="#">{{i.typeName}}</a> </li>
-                
-               
+            <ul>
+                <li><a href="#">手机回收</a> </li>
+                <li><a href="#">平板电脑回收</a> </li>
+                <li><a href="#">笔记本回收</a> </li>
+                <li><a href="#">摄影摄像回收</a> </li>
+                <li><a href="#">智能数码回收</a> </li>
             </ul>
         </div>
 
@@ -35,17 +37,9 @@
 </template>
 
 <script>
-import Vue from "vue";
 
 export default {
-
-  mounted(){
- 
-   
-      this.$store.dispatch("getTitle")
-   
-    
-  }
+  
 }
 
 </script>
@@ -162,7 +156,7 @@ li,dt,dd{
           padding-top:18px;
           @include widhei(588px,null);
           li{
-            float:left;
+
             padding-right:38px;
             a{
               @include fontSizCol(16px,#f8f7f4,null);

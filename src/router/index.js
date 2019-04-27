@@ -3,12 +3,9 @@ import Router from 'vue-router'
 import AboutUs from '../views/aboutUs/index.vue'
 import ConfigurationSelection from '../views/ConfigurationSelection/index.vue'
 import Evaluation from '../views/Evaluation/index.vue'
-// import Home from '../components/homepage/index.vue'
+import Home from '@/views/home'
 import Login from '@/views/Login.vue'
 import OrderPerson from "@/views/OrderPerson.vue"
-import Shopcar from '../views/shopcar/shopcar.vue'
-import index from '@/views/Index/index.vue'
-import Success from '../views/Success/Success.vue'
 
 Vue.use(Router)
 
@@ -24,9 +21,9 @@ export default new Router({
       }
     },
     {
-      name:"index",
-      path:"/index",
-      component: index
+      name:"home",
+      path:"/home",
+      component: Home
     },
     {
       name:"login",
@@ -51,7 +48,7 @@ export default new Router({
       // this generates a separate chunk (coupon.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: function () { 
-        return import(/* webpackChunkName: "coupon" */ '@/views/Coupon')
+        return import(/* webpackChunkName: "coupon" */ '@/views/Coupon.vue')
       }
     },
     {
@@ -61,7 +58,7 @@ export default new Router({
       // this generates a separate chunk (coupon.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: function () { 
-        return import(/* webpackChunkName: "account" */ '@/views/Account')
+        return import(/* webpackChunkName: "account" */ '@/views/Account.vue')
       }
     },
     {
@@ -89,52 +86,13 @@ export default new Router({
       path:'/orderInformation',
       name:'orderInformation',
       component:function () {
-        return import( '@/views/OrderInformation')
+        return import( '@/views/OrderInformation.vue')
       }
     },
     {
-      path:'/form',
-      name:'form',
-      component:function () {
-        return import( '@/views/form.vue')
-      }
-    },
-    {
-      name:"shopcar",
-      path:"/shopcar",
-      component: Shopcar
-    },
-    {
-      path:'/',
-      redirect:'index'
-    },
-    {
-      name:"Success",
-      path:'/success',
-      component:Success
-    },
-    {
-      path: '/second',
-      name: 'second',
-      component: function () {
-        return import( '@/views/Second')
-      }
-    },
-    {
-      path: '/shopcar',
-      name: 'shopcar',
-      component: function () {
-        return import( '@/views/shopcar/shopcar.vue')
-      }
-    },
-    {
-      path: '/third',
-      name: 'third',
-      component: function () {
-        return import( '@/views/third')
-      }
-    },
-
-
+      path:'/deposit',
+      name:'deposit',
+      component:()=>import('@/views//deposit')
+    }
   ]
 })

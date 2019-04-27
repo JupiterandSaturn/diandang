@@ -1,46 +1,48 @@
 <template>
   <div id="app">
 
-      <router-link to="/index">首页</router-link>|
-      <router-link to="/about">About</router-link>|
-      <router-link to="/coupon">优惠券</router-link>|
-      <router-link to="/Account">个人账户</router-link>|
-      <router-link to="/aboutUs">关于我们</router-link>|
-      <router-link to="/ConfigurationSelection">配置选择</router-link>|
-      <router-link to="/Evaluation">评价回顾</router-link>|
-         <router-link to="/login">登录</router-link>|
-      <router-link to="/orderperson">个人订单</router-link>|
-      <router-link to="/personalInformation">个人信息</router-link>|
-      <router-link to="/orderInformation">订单信息</router-link>|
-      <router-link to="/form">来自</router-link>|
-      <router-link to="/second">二级菜单</router-link>|
-      <router-link to="/third">三级菜单</router-link>|
-      <router-link to="/shopcar">购物车</router-link>|
-
-
-      <router-view/>
+<!--     <div id="nav">-->
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> |
+      <router-link to="/coupon">Coupon</router-link> |
+      <router-link to="/Account">Account</router-link> |
+      <router-link to="/aboutUs">aboutUs</router-link> |
+      <router-link to="/ConfigurationSelection">ConfigurationSelection</router-link>|
+      <router-link to="/Evaluation">Evaluation</router-link> |
+      <router-link to="/home">home</router-link> | 
+         <router-link to="/login">Login</router-link>|
+      <router-link to="/orderperson">个人订单</router-link> |
+      <router-link to="/personalInformation">个人信息</router-link> |
+      <router-link to="/orderInformation">订单信息</router-link> |
+      <router-link to="/deposit">余额提现</router-link>
+      <HomePage/>
+<!--    </div>-->
+<!--    <router-view/>-->
   </div>
 </template>
 
 <script>
 
+import HomePage from './components/homepage/index'
 
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    HomePage
+  }
 }
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     color: #2c3e50;
   }
   #nav {
-    /*padding: 30px;*/
+    padding: 30px;
     a {
       font-weight: bold;
       color: #2c3e50;

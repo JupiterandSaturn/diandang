@@ -25,11 +25,9 @@
         <div id="pageTop_top_center">
             <p>公司名称</p>
             <ul>
-                <li><a href="#">手机回收</a> </li>
-                <li><a href="#">平板电脑回收</a> </li>
-                <li><a href="#">笔记本回收</a> </li>
-                <li><a href="#">摄影摄像回收</a> </li>
-                <li><a href="#">智能数码回收</a> </li>
+            
+                <li v-for="i in $store.state.PageTop.typename"><a href="#">{{i.typeName}}回收</a> </li>
+        
             </ul>
             <h1>个人卡券</h1>
         </div>
@@ -42,9 +40,12 @@
 </template>
 
 <script>
-
+import Vue from 'vue'
 export default {
-  
+
+  mounted(){
+    this.$store.dispatch("getTitle")
+  }
 }
 
 </script>

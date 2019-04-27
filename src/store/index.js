@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import login from './login'
-import register from './register'
-import pageTop from './pageTop'
+import PageTop from './pageTop'
+import HomePage from './homePage'
 
 Vue.use(Vuex)
 
@@ -14,11 +13,10 @@ export default new Vuex.Store({
 
   },
   actions: {
-
+    
   },
-  modules:{
-    login,
-    register,
-    pageTop
+  modules: {
+    PageTop,
+    HomePage
   }
 })
