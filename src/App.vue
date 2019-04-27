@@ -1,24 +1,6 @@
 <template>
   <div id="app">
 
-<<<<<<< HEAD
-
-      <router-link to="/">Home</router-link> |
-      <router-link to='/second'>Second</router-link> |
-      <router-link to='/third'>Third</router-link>  |
-      <router-link to="/about">About</router-link>|
-      <router-link to="/coupon">Coupon</router-link>|
-      <router-link to="/Account">Account</router-link>|
-      <router-link to="/aboutUs">aboutUs</router-link>|
-      <router-link to="/ConfigurationSelection">ConfigurationSelection</router-link>|
-      <router-link to="/Evaluation">Evaluation</router-link>|
-      <router-link to="/login">Login</router-link>|
-      <router-link to='/shopcar'>Shopcar</router-link>  |
-      <router-link to="/orderperson">个人订单</router-link>|
-      <router-link to="/personalInformation">个人信息</router-link>|
-      <router-link to="/orderInformation">订单信息</router-link>|
-      <HomePage/>
-=======
       <router-link to="/index">首页</router-link>|
       <router-link to="/about">About</router-link>|
       <router-link to="/coupon">优惠券</router-link>|
@@ -33,32 +15,21 @@
       <router-link to="/form">来自</router-link>|
       <router-link to="/second">二级菜单</router-link>|
       <router-link to="/third">三级菜单</router-link>|
+      <router-link to="/shopcar">购物车</router-link>|
 
 
       <router-view/>
->>>>>>> e4be65c317689ce24d3bd017597bc926f7cb889d
   </div>
 </template>
 
 <script>
 
-<<<<<<< HEAD
-import HomePage from './components/homepage/index'
-=======
->>>>>>> e4be65c317689ce24d3bd017597bc926f7cb889d
 
 export default {
-  name: 'app',
-  components:{
-    HomePage
-  }
+  name: 'app'
 }
 </script>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> e4be65c317689ce24d3bd017597bc926f7cb889d
 
 <style lang="scss">
   #app {
@@ -79,7 +50,3 @@ export default {
     }
   }
 </style>
-<<<<<<< HEAD
-
-=======
->>>>>>> e4be65c317689ce24d3bd017597bc926f7cb889d

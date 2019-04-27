@@ -13,7 +13,7 @@
   export default {
     name:"about",
     components :{
-      pageTopMin,
+      pageTopMin
     }
   }
 </script>

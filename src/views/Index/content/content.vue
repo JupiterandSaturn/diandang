@@ -41,15 +41,6 @@ export default {
   } */
   .item-img img{
                   width:100%;
-                  height: 473px;
-  }
-  .el-carousel{
-                height: 473px;
-  }
-  .el-carousel-item{
-                   height: 473px
-  }
-  .el-carousel__container{
-    height:473px;
+                  height: 100%;
   }
 </style>

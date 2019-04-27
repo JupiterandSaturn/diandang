@@ -14,6 +14,12 @@ export default {
     
 }
 </script>
-<style>
-    
+<style scoped>
+    #third-nav{
+        line-height: 70px;
+      width:1200px;
+      margin:0 auto;
+      height:70px;
+
+    }
 </style>

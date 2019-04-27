@@ -52,8 +52,10 @@ export default {
 
 <style scope>
 .goods-list{
-    width: 1870px;
+  
+    width: 1200px;
     margin: 0 auto;
+  
     overflow: hidden;
 }
 .goods-list ul{

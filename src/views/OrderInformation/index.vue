@@ -9,7 +9,7 @@
                         <h6>您的信息</h6>
                         <h6>账号详情</h6>
                         <h6>您的地址</h6>
-                        <!--                        <p>{{ $store.state.OrderInformation.getProvinceList}}</p>-->
+<!--                                                <p>{{ $store.state.OrderInformation.getProvinceList}}</p>-->
                     </div>
                     <div id="con_cen_true_right">
                         <el-form ref="form" :model="form" label-width="80px">
@@ -29,7 +29,7 @@
                                     <el-option label="女士" value="women"></el-option>
                                 </el-select>
                                 <el-input v-model="form.familyName" style="width:384px;padding-left:11px"></el-input>
-                                <el-input v-model="form.name"
+                                <el-input v-model="form.trueName"
                                           style="width:384px;padding-left:11px;padding-right:20px;"></el-input>
                             </p>
                             <p>
@@ -87,12 +87,12 @@
                                            style="width:268px;margin-right:46px;">
                                     <el-option
                                             v-for="item in $store.state.OrderInformation.getProvinceList"
-
+                                            :value="item.provinceid"
                                             :key=item.id
                                             :label=item.province>
                                     </el-option>
                                 </el-select>
-                                <el-select v-model="form.city" placeholder="市"
+                                <el-select v-model="form.city110100" placeholder="市"
                                            style="width:268px;margin-right:46px;">
                                     <el-option label="先生" value="man"></el-option>
                                     <el-option label="女士" value="women"></el-option>
@@ -107,7 +107,7 @@
                                 <span>详细信息</span>
                             </p>
                             <p>
-                                <el-input v-model="form.address" style="width:890px;margin-left:5px;"></el-input>
+                                <el-input v-model="form.address1" style="width:890px;margin-left:5px;"></el-input>
                             </p>
                             <el-checkbox-group v-model="form.addr">
                                 <el-checkbox label="这是我的默认地址" name="type"></el-checkbox><br>
@@ -122,11 +122,7 @@
                             <!--                            此处隐私政策应该有------------------我们的隐私政策地址-------->
                             <p>点击以上按钮代表您接收我们的<a href="">隐私政策</a></p>
                         </el-form>
-
                     </div>
-
-
-
                 </div>
                 <div id="con_cen_middle"></div>
                 <div id="con_cen_bottom"></div>
@@ -145,7 +141,7 @@
 
 
     export default {
-        name:"coupon",
+        // name:"coupon",
         components :{
             pageTop,
             pageBottom,
@@ -155,23 +151,23 @@
                 form: {
                     sexe: '',
                     familyName: '',
-                    name: '',
+                    trueName: '',
                     nationality: '',
                     birthday: '',
-                    internationalCode: '',
+                    internationalAreaCode: '',
                     phone: '',
                     email: '',
                     provinceList:'',
-                    city:'',
+                    city110100:'',
                     area:'',
-                    address:'',
+                    address1:'',
                     addr:'',
                 },
-                phoneNum:{num:form.phone},
-                options: $store.state.OrderInformation.getProvinceList,
+                // phoneNum:{num:phone},
+                options: this.$store.state.OrderInformation.getProvinceList,
             }
         },
-        mounteds:{
+        methods:{
             onSubmit(){
                 console.log('submit!' + form)
             },
@@ -180,7 +176,10 @@
             // this.$store.dispatch("getOrder");
             // this.$store.dispatch("getTitle");
             this.$store.dispatch("getProvinceList");
-            // console.log( $store.state.OrderInformation.getProvinceList)
+            this.$store.dispatch("getCityList");
+            // console.log(form.provinceList);
+            // console.log(this.$store.state.OrderInformation.getCityList);
+            console.log( this.$store.state.OrderInformation.getProvinceList)
         }
     }
 </script>

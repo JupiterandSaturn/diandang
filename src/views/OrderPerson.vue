@@ -120,10 +120,12 @@ export default {
     background: rgba(231, 231, 231, 1);
     opacity: 1;
     .order-title {
+        margin:0 auto;
         width: 1200px;
         height: 204px;
         overflow: hidden;
         .order-num {
+            float:left;
             padding-top: 91px;
             width: 203px;
             height: 45px;
@@ -300,7 +302,7 @@ export default {
    .order-list-total {
         border-bottom: 1px solid rgba(112, 112, 112, 1);
         list-style: none;
-        height: 87px;
+        height:176px;
         .goods-allNum {
             width: 250px;
             margin: 86px 0 0 823px;
@@ -357,7 +359,7 @@ export default {
             margin-left:93px;
          
             .normal-ems{
-                margin-top:4px;
+                margin-top:4px; 
                 width:56px;
             font-size:14px;
             color:rgba(27,27,27,1);

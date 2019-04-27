@@ -20,12 +20,10 @@
         </div>
         <div id="pageTop_top_center">
             <p>公司名称</p>
-            <ul>
-                <li><a href="#">手机回收</a> </li>
-                <li><a href="#">平板电脑回收</a> </li>
-                <li><a href="#">笔记本回收</a> </li>
-                <li><a href="#">摄影摄像回收</a> </li>
-                <li><a href="#">智能数码回收</a> </li>
+            <ul >
+                <li v-for=" i in $store.state.typeName"><a href="#">{{i.typeName}}</a> </li>
+                
+               
             </ul>
         </div>
 
@@ -37,9 +35,17 @@
 </template>
 
 <script>
+import Vue from "vue";
 
 export default {
-  
+
+  mounted(){
+ 
+   
+      this.$store.dispatch("getTitle")
+   
+    
+  }
 }
 
 </script>
@@ -81,12 +87,12 @@ li,dt,dd{
 
 
   #page_top{
-    @include widhei(null,133px);
+    @include widhei(100%,133px);
     background:#1B1B1B;
-
+    background-size: auto;
     #pageTop_top{
         overflow: hidden;
-        @include widhei(null,null);
+        @include widhei(100%,null);
       #pageTop_top_left{
         float:left;
         width:308px;
@@ -141,7 +147,7 @@ li,dt,dd{
         }
       }
       #pageTop_top_center{
-
+          /*width:auto;*/
           &>p{
             @include  widhei(187px,45.76px);
             background:#d4cec9;
@@ -152,9 +158,11 @@ li,dt,dd{
 
           }
         &>ul{
+          /*overflow: hidden;*/
           padding-top:18px;
           @include widhei(588px,null);
           li{
+            float:left;
             padding-right:38px;
             a{
               @include fontSizCol(16px,#f8f7f4,null);
