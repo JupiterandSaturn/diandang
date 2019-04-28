@@ -86,7 +86,7 @@
         float:left;
     }
     #page_top{
-        background:url("../assets/account/fb0a0c3239fc3cbc67596886761d02d.png") ;
+        background:url("../../assets/account/fb0a0c3239fc3cbc67596886761d02d.png") ;
     }
 
     #content{

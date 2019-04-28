@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import AboutUs from '../views/aboutUs/index.vue'
+<<<<<<< HEAD
 import Home from '../components/homepage/index.vue'
 import Login from '@/views/Login.vue'
 import OrderPerson from "@/views/OrderPerson.vue"
@@ -9,6 +10,16 @@ import Index from '../views/Index/index.vue'
 import Success from '../views/Success/Success.vue'
 import Second from '../views/Second/index.vue'
 import Third from '../views/third/index.vue'
+=======
+import ConfigurationSelection from '../views/ConfigurationSelection/index.vue'
+import Evaluation from '../views/Evaluation/index.vue'
+// import Home from '../components/homepage/index.vue'
+import Login from '@/views/Login.vue'
+import OrderPerson from "@/views/OrderPerson.vue"
+import Shopcar from '../views/shopcar/shopcar.vue'
+import index from '@/views/Index/index.vue'
+import Success from '../views/Success/Success.vue'
+>>>>>>> e4be65c317689ce24d3bd017597bc926f7cb889d
 
 Vue.use(Router)
 
@@ -22,16 +33,19 @@ export default new Router({
       component: function () {
         return import(/* webpackChunkName: "coupon" */ '@/views/About.vue')
       }
+<<<<<<< HEAD
       },
       {
       name:"index",
       path:"/index",
       component: Index
+=======
+>>>>>>> e4be65c317689ce24d3bd017597bc926f7cb889d
     },
     {
-      name:"home",
-      path:"/home",
-      component: Home
+      name:"index",
+      path:"/index",
+      component: index
     },
     {
       name:"login",
@@ -56,7 +70,7 @@ export default new Router({
       // this generates a separate chunk (coupon.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: function () { 
-        return import(/* webpackChunkName: "coupon" */ '@/views/Coupon.vue')
+        return import(/* webpackChunkName: "coupon" */ '@/views/coupon')
       }
     },
     {
@@ -66,7 +80,7 @@ export default new Router({
       // this generates a separate chunk (coupon.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: function () { 
-        return import(/* webpackChunkName: "account" */ '@/views/Account.vue')
+        return import(/* webpackChunkName: "account" */ '@/views/Account')
       }
     },
     {
@@ -94,7 +108,14 @@ export default new Router({
       path:'/orderInformation',
       name:'orderInformation',
       component:function () {
-        return import( '@/views/OrderInformation.vue')
+        return import( '@/views/OrderInformation')
+      }
+    },
+    {
+      path:'/form',
+      name:'form',
+      component:function () {
+        return import( '@/views/form.vue')
       }
     },
      
@@ -113,14 +134,35 @@ export default new Router({
       component:Success
     },
     {
-      name:'Second',
-      path:'/second',
-      component:Second
+      path: '/second',
+      name: 'second',
+      component: function () {
+        return import( '@/views/Second')
+      }
     },
     {
+      path: '/shopcar',
+      name: 'shopcar',
+      component: function () {
+        return import( '@/views/shopcar/shopcar.vue')
+      }
+    },
+    {
+<<<<<<< HEAD
       name:'Third',
       path:'/third',
       component:Third
     }
     ]
+=======
+      path: '/third',
+      name: 'third',
+      component: function () {
+        return import( '@/views/third')
+      }
+    },
+
+
+  ]
+>>>>>>> e4be65c317689ce24d3bd017597bc926f7cb889d
 })
