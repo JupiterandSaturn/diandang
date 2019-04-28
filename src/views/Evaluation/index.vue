@@ -139,6 +139,7 @@
                         ul{
                             overflow: hidden;
                             border-top:1px solid #000;
+                            float: none;
                             li{
                                 float: left;
                                 margin:12px 45px;
