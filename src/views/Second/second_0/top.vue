@@ -1,45 +1,31 @@
 <template>
     <div class='main'>
        <div class='main_1'>
-         <ul>
-               <li>
-                    <img src="../../../../public/images/imgPersonal/11.png" alt="">
-                    <p>手机</p>
+           <ul>
+                <li v-for="item in $store.state.second.typename">
+                    <img src="../../../../public/images/imgPersonal/9.png">
+                    <p>{{item.typeName}}</p> 
                 </li>
-                <li>
-                    <img src="../../../../public/images/imgPersonal/11.png" alt="">
-
-                    <p>平板电脑</p>
-                </li>
-                <li>
-                    <img src="../../../../public/images/imgPersonal/11.png" alt="">
-
-                    <p>笔记本</p>
-                </li>
-                <li>
-                    <img src="../../../../public/images/imgPersonal/11.png" alt="">
-
-                    <p>摄影摄像</p>
-                </li>
-                <li>
-                    <img src="../../../../public/images/imgPersonal/11.png" alt="">
-
-                    <p>智能数码</p>
-                </li>
-          </ul>
+           </ul> 
        </div>
     </div>
 </template>
 <script>
+
+import vuex from "vuex"
+// import store from '../../../store/second/index.js'
 export default {
-    
+         mounted(){
+             this.$store.dispatch('getTop')
+         }
+        
 }
 </script>
 <style scope>
-.main{
+/* .main{
     background: white;
     overflow: hidden;
-}
+} */
 .main .main_1{
     width: 1200px;
     margin: 0 auto;

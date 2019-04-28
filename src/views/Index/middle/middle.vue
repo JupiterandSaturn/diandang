@@ -3,7 +3,7 @@
        <div class='one'>
           <img src='../../../../public/images/imgPersonal/sy.png'>
           <span>手机典当</span>
-       </div>
+         </div>
         
        <div class='two'>
           <img src='../../../../public/images/imgPersonal/pb.png'>
@@ -16,12 +16,12 @@
        </div>
    
        <div class='four'>
-          <img src='../../../../public/images/imgPersonal/sm.png'>
+          <img src='../../../../public/images/imgPersonal/bjb.png'>
           <span>手机典当</span>
        </div>
              
        <div class='five'>
-          <img src='../../../../public/images/imgPersonal/sy.png'>
+          <img src='../../../../public/images/imgPersonal/sm.png'>
           <span>手机典当</span>
        </div>
       
@@ -29,7 +29,9 @@
 </template>
 <script>
 export default {
-    
+   //  mounted() {
+   //      this.$store.dispatch()
+   //  },
 }
 </script>
 <style scope>

@@ -1,42 +1,38 @@
 <template>
   <div id="app">
-<<<<<<< HEAD
 
-<!--     <div id="nav">-->
+
       <router-link to="/">Home</router-link> |
+      <router-link to='/second'>Second</router-link> |
+      <router-link to='/third'>Third</router-link>  |
       <router-link to="/about">About</router-link>|
       <router-link to="/coupon">Coupon</router-link>|
       <router-link to="/Account">Account</router-link>|
       <router-link to="/aboutUs">aboutUs</router-link>|
       <router-link to="/ConfigurationSelection">ConfigurationSelection</router-link>|
       <router-link to="/Evaluation">Evaluation</router-link>|
-      <router-link to="/home">home</router-link>
-         <router-link to="/login">Login</router-link>|
+      <router-link to="/login">Login</router-link>|
+      <router-link to='/shopcar'>Shopcar</router-link>  |
       <router-link to="/orderperson">个人订单</router-link>|
       <router-link to="/personalInformation">个人信息</router-link>|
       <router-link to="/orderInformation">订单信息</router-link>|
       <HomePage/>
-<!--    </div>-->
-<!--    <router-view/>-->
-=======
-    <router-view></router-view>
->>>>>>> g
   </div>
 </template>
 
 <script>
-<<<<<<< HEAD
 
 import HomePage from './components/homepage/index'
-=======
->>>>>>> g
 
 export default {
-  name: 'app'
+  name: 'app',
+  components:{
+    HomePage
+  }
 }
 </script>
 
-<<<<<<< HEAD
+
 
 <style lang="scss">
   #app {
@@ -57,7 +53,4 @@ export default {
     }
   }
 </style>
-=======
-<style lang="scss">
-</style>
->>>>>>> g
+

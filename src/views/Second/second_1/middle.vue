@@ -1,65 +1,13 @@
 <template>
      <div id="logo-list">
             <ul>
-                <li>
+                <li v-for='item in $store.state.list'>
                    <i>
-                       <img src="../../../../public/images/imgPersonal/11.png" alt=""><span></span>
-
-                   </i>
-
-                </li>
-                <li>
-                    <i>
-                        <img src="../../../../public/images/imgPersonal/11.png" alt=""><span></span>
-
+                       <img src="../../../../public/images/imgPersonal/10.png"><span></span>
                     </i>
-
+                    <p>{{item.typeName}}</p> 
                 </li>
-                <li>
-                    <i>
-                        <img src="../../../../public/images/imgPersonal/11.png" alt=""><span></span>
-
-                    </i>
-
-                </li>
-                <li>
-                    <i>
-                        <img src="../../../../public/images/imgPersonal/11.png" alt=""><span></span>
-
-                    </i>
-
-                </li>
-                <li>
-                    <i>
-                        <img src="../../../../public/images/imgPersonal/11.png" alt=""><span></span>
-
-                    </i>
-
-                </li>
-                <li>
-                    <i>
-                        <img src="../../../../public/images/imgPersonal/11.png" alt=""><span></span>
-
-                    </i>
-
-                </li>
-                <li>
-                    <i>
-                        <img src="../../../../public/images/imgPersonal/11.png" alt=""><span></span>
-
-                    </i>
-
-                </li>
-                <li>
-                    <i>
-                        <img src="../../../../public/images/imgPersonal/11.png" alt=""><span></span>
-
-                    </i>
-
-                </li>
-
             </ul>
-          
             <div id="logo-info-more">
                 <input type="button" value="加载更多">
             </div>
@@ -67,9 +15,12 @@
 </template>
 
 <script>
+import Vue from 'vue'
 export default {
-    
-           }
+      mounted(){
+          
+      }
+}
 </script>
 
 <style scope>
@@ -147,4 +98,5 @@ export default {
     font-size: 14px;
     color: #E5DFD9;
 } 
+
 </style>

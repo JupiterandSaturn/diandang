@@ -1,5 +1,5 @@
 <template>
-       <div id="goods-list">
+       <div class="goods-list">
         <ul>
             <li>
                 <img src="../../../../public/images/imgPersonal/sy.png" alt="">
@@ -51,18 +51,18 @@ export default {
 </script>
 
 <style scope>
-#goods-list{
+.goods-list{
     width: 1870px;
     margin: 0 auto;
     overflow: hidden;
 }
-#goods-list ul{
+.goods-list ul{
 
     overflow: hidden;
     margin-top: 7px;
 
 }
-#goods-list ul li{
+.goods-list ul li{
     float: left;
     width: 25%;
     height: 574px;
@@ -76,13 +76,13 @@ export default {
 
 }
 
-#goods-list ul li span{
+.goods-list ul li span{
     display: inline-block;
     width: 0px;
     height: 100%;
     vertical-align: middle;
 }
-#goods-list ul li img{
+.goods-list ul li img{
     width: 166px;
     /*height: 150px;*/
     display: inline-block;
