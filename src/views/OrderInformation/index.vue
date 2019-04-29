@@ -9,11 +9,7 @@
                         <h6>您的信息</h6>
                         <h6>账号详情</h6>
                         <h6>您的地址</h6>
-<<<<<<< HEAD
-<!--                                                <p>{{ $store.state.OrderInformation.getProvinceList}}</p>-->
-=======
                         <!--                                                <p>{{ $store.state.OrderInformation.getProvince}}</p>-->
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
                     </div>
                     <div id="con_cen_true_right">
                         <el-form ref="form" :model="form" label-width="80px">
@@ -86,13 +82,6 @@
                             </p>
                             <!--                           下p 14-->
                             <p>
-<<<<<<< HEAD
-                                <el-select v-model="form.provinceList"
-                                           placeholder="省份/直辖市"
-                                           style="width:268px;margin-right:46px;">
-                                    <el-option
-                                            v-for="item in $store.state.OrderInformation.getProvinceList"
-=======
                                 <el-select v-model="form.province"
                                            placeholder="省份/直辖市"
                                            style="width:268px;margin-right:46px;"
@@ -100,23 +89,11 @@
                                            popper-class="dropDown_province">
                                     <el-option
                                             v-for="item in $store.state.OrderInformation.Province"
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
                                             :value="item.provinceid"
                                             :key=item.id
                                             :label=item.province>
                                     </el-option>
                                 </el-select>
-<<<<<<< HEAD
-                                <el-select v-model="form.city110100" placeholder="市"
-                                           style="width:268px;margin-right:46px;">
-                                    <el-option label="先生" value="man"></el-option>
-                                    <el-option label="女士" value="women"></el-option>
-                                </el-select>
-                                <el-select v-model="form.area" placeholder="县/区"
-                                           style="width:268px">
-                                    <el-option label="先生" value="man"></el-option>
-                                    <el-option label="女士" value="women"></el-option>
-=======
                                 <el-select v-model="form.city" placeholder="市"
                                            style="width:268px;margin-right:46px;"
                                            @change="$store.dispatch('Area',form.city)"
@@ -134,7 +111,6 @@
                                                :value="item.area"
                                                :key=item.id
                                                :label=item.area></el-option>
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
                                 </el-select>
                             </p>
                             <p>
@@ -173,14 +149,10 @@
     import pageBottom from '@/components/currency/page-bottom.vue'
     import Vue from 'vue';
 
-<<<<<<< HEAD
-
-=======
     let url = {
         url:150000
     };
     // console.log(provinceList);
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
     export default {
         // name:"coupon",
         components :{
@@ -198,50 +170,26 @@
                     internationalAreaCode: '',
                     phone: '',
                     email: '',
-<<<<<<< HEAD
-                    provinceList:'',
-                    city110100:'',
-=======
                     province:'',
                     city:'',
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
                     area:'',
                     address1:'',
                     addr:'',
                 },
-<<<<<<< HEAD
-                // phoneNum:{num:phone},
-                options: this.$store.state.OrderInformation.getProvinceList,
-=======
 
                 // phoneNum:{num:phone},
                 // options: this.$store.state.OrderInformation.getProvince,
                 // provinceid:"",
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
             }
         },
         methods:{
             onSubmit(){
-<<<<<<< HEAD
-                console.log('submit!' + form)
-            },
-        },
-        mounted(){
-            // this.$store.dispatch("getOrder");
-            // this.$store.dispatch("getTitle");
-            this.$store.dispatch("getProvinceList");
-            this.$store.dispatch("getCityList");
-            // console.log(form.provinceList);
-            // console.log(this.$store.state.OrderInformation.getCityList);
-            console.log( this.$store.state.OrderInformation.getProvinceList)
-=======
                 this.$store.dispatch("setOrder",this.form);
                 console.log('submit!' + this.form.sexe)
             },
         },
         mounted(){
             this.$store.dispatch("Province");
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
         }
     }
 </script>
@@ -266,7 +214,7 @@
         text-align: center;
         line-height: $lineHeight;
     }
-    //函数的复用属性
+    //下拉列表的复用属性
     @mixin dropDown($width){
         width:$width;
         height:44px;
@@ -334,8 +282,6 @@
             }
         }
     }
-<<<<<<< HEAD
-=======
          .dropDown_province{
              /*width:400px;*/
              .el-scrollbar{
@@ -366,7 +312,6 @@
             }
         }
     }
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
 
     /*下拉表格样式*/
     .el-select,.el-input__inner,input,.el-input{

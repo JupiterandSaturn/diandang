@@ -77,6 +77,7 @@ export default({
                     // console.log('进入getProvinceList')
                     this.state.Province = data.province;
                     console.log(data.province);
+                    console.log(data);
                     commit("SET_PROVINCE",data.province)
                 })
         },
@@ -86,7 +87,8 @@ export default({
                 .then(({data})=>{
                     // console.log(11111111111111111);
                     this.state.City = data;
-                    console.log(data.city);
+                    console.log(data);
+                    console.log(province);
                     commit("SET_CITY",data.city);
                 })
         },

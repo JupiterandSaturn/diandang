@@ -147,6 +147,13 @@ export default new Router({
         return import( '@/views/third')
       }
     },
+	{
+      path: '/personal',
+      name: 'personal',
+      component: function () {
+        return import( '@/views/personal')
+      }
+    },
 
 
   ]

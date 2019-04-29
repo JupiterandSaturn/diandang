@@ -14,7 +14,7 @@
                         <span>取货地址</span>
                     </p>
                     <div id="form_radio_one">
-            
+
                         <el-radio v-model="radio" label="1" class="radio1">
                             <span>&nbsp;&nbsp;山峰&nbsp;&nbsp;&nbsp;先生</span>
                         </el-radio>
@@ -26,9 +26,57 @@
                         <p>默认地址</p>
                         <br>
                         <el-radio v-model="radio" label="2" >添加新地址</el-radio>
+                        <div id="new_address" v-show="radio == 1 ? false:true">
+                            <br><br>
+                            <p>
+                                <span>省</span>
+                                <span>市</span>
+                                <span>区</span>
+                            </p>
+                            <!--                           下p 14-->
+                            <p>
+                                <el-select v-model="province"
+                                           placeholder="省份/直辖市"
+                                           style="width:240px;margin-right:34px;"
+                                           @change="$store.dispatch('City',province)"
+                                           popper-class="dropDown_province">
+                                    <el-option
+                                            v-for="item in $store.state.OrderInformation.Province"
+                                            :value="item.provinceid"
+                                            :key=item.id
+                                            :label=item.province>
+                                    </el-option>
+                                </el-select>
+                                <el-select v-model="city" placeholder="市"
+                                           style="width:240px;margin-right:34px;"
+                                           @change="$store.dispatch('Area',city)"
+                                           popper-class="dropDown_city110100">
+                                    <el-option v-for="item in $store.state.OrderInformation.City"
+                                               :value="item.cityid"
+                                               :key=item.id
+                                               :label=item.city></el-option>
+
+                                </el-select>
+                                <el-select v-model="area" placeholder="县/区"
+                                           style="width:240px"
+                                           popper-class="dropDown_area">
+                                    <el-option v-for="item in $store.state.OrderInformation.Area"
+                                               :value="item.areaid"
+                                               :key=item.id
+                                               :label=item.area></el-option>
+                                </el-select>
+                            </p><br>
+                            <p>
+                                <span>详细信息</span>
+                            </p>
+                            <p>
+                                <el-input v-model="address" style="width:800px;"></el-input>
+                            </p>
+                        </div>
+
                         <br>
                         <h5>取件方式</h5>
-                        <el-radio v-model="take_part" label="0">
+                        <el-radio v-model="radio_express" label="1">
                             <span>&nbsp;&nbsp;顺丰快递</span>
                         </el-radio>
                         <br><br>
@@ -41,7 +89,9 @@
                             <span>暂无优惠券</span>
                         </el-radio>
                         <br><br><br><br>
-                        <el-radio v-model="radio_coupon" label="2" >使用优惠券</el-radio>
+                        <el-radio v-model="radio_coupon" label="2" >
+                            <span>使用优惠券</span>
+                        </el-radio>
                         
                     </div>
                 </div>
@@ -112,23 +162,35 @@
 <script>
     import pageTop from    '@/components/currency/page-top-min.vue'
     import pageBottom from '@/components/currency/page-bottom.vue'
-    
+
 
     export default {
         name:"coupon",
+        props:{
+          value:""
+        },
         data () {
             return {
-                col:'black',
-                radio: '1',
-                take_part:"0",
+                radio: "1",
+                province:"",
+                city:"",
+                area:"",
+                address:"",
+                radio_express:"1",
                 radio_coupon:"1",
+
+
+                col:'black',
                 number_of_packages:"2",
                 img:"../assets/page-top/cart.png",
                 money:"2510",
                 freight:"免费",
-                checked: true,
+                checked: false,
             };
            
+        },
+        mounted(){
+            this.$store.dispatch("Province");
         },
         
         components :{
@@ -170,6 +232,67 @@
         float:left;
     }
 
+    /*下拉表格样式*/
+    .el-select,.el-input__inner,input,.el-input{
+        float:left;
+        padding:0;
+    }
+    //下拉列表的复用属性
+    @mixin dropDown($width){
+        width:$width;
+        height:44px;
+        line-height:44px;
+        background:#fff;
+        color:#000;
+        margin:0 auto;
+        text-align:center;
+        font-size:12px;
+        float:none;
+    }
+
+    .el-input__inner{
+        height:44px;
+        padding-left:20px;
+    }
+    .el-input--suffix .el-input__inner{
+        padding-left:10px
+    }
+
+    //页面下拉列表
+    .dropDown_province{
+        /*width:400px;*/
+        .el-scrollbar{
+            .el-scrollbar__view{
+                .el-select-dropdown__item{
+                    @include dropDown(268px);
+                }
+            }
+        }
+    }
+    .dropDown_city110100{
+        /*width:400px;*/
+        .el-scrollbar{
+            .el-scrollbar__view{
+                .el-select-dropdown__item{
+                    @include dropDown(268px);
+                }
+            }
+        }
+    }
+    .dropDown_area{
+        /*width:400px;*/
+        .el-scrollbar{
+            .el-scrollbar__view{
+                .el-select-dropdown__item{
+                    @include dropDown(268px);
+                }
+            }
+        }
+    }
+
+
+
+
 
 
     #content{
@@ -186,7 +309,7 @@
                 /*height:98px;*/
                 overflow: hidden;
                 margin:25px 0 0 18px;
-                background:#f0f;
+                /*background:#f0f;*/
                 //content_center_left con_cen_left
                 #con_cen_left_top{
                     @include widhei(null,10%);
@@ -238,7 +361,33 @@
                 #form_radio_one{
                     margin-top:42px;
                     float:left;
-                    
+
+
+                    #new_address{
+                        &>p{
+                            padding-left:0px;
+                        }
+                        p:nth-of-type(1){
+                            padding-top:26px;
+                            span{
+                                padding-right:262px;
+                            }
+                        }
+                        p:nth-of-type(2){
+                            padding-top:10px;
+                        }
+                        p:nth-of-type(3){
+                            padding-top:30px;
+                        }
+                        p:nth-of-type(4){
+                            padding-top:10px;
+                            padding-left:0;
+                            margin:0;
+
+                        }
+                    }
+
+
                     label{
                         float:left;
                         text-align:left;
@@ -347,6 +496,7 @@
                         margin-top:24px;
                         ul{
                             width:338px;
+                            float:none;
                             li{
                                 width:100%;
                                 p{

@@ -15,15 +15,8 @@
       <router-link to="/orderperson">个人订单</router-link>|
       <router-link to="/personalInformation">个人信息</router-link>|
       <router-link to="/orderInformation">订单信息</router-link>|
-<<<<<<< HEAD
-      
-=======
       <router-link to="/form">来自</router-link>|
-      <router-link to="/second">二级菜单</router-link>|
-      <router-link to="/third">三级菜单</router-link>|
-      <router-link to="/shopcar">购物车</router-link>|
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
-
+		<router-link to="/personal">个人中心</router-link>|
 
       <router-view/>
   </div>
@@ -32,10 +25,7 @@
 <script>
 
 export default {
-  name: 'app',
-  components:{
-    // HomePage
-  }
+  name: 'app'
 }
 </script>
 
