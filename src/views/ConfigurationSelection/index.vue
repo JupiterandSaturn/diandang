@@ -5,15 +5,16 @@
             <div class="CS_banner1">
                 <div class="CS_banner2">
                     <div class="bannerLeft">
-                        <div class="imgBox" >
+                        <div class="imgBox">
                             <img :src="imgUrl" alt="">
-                            <h2>{{$store.state.ConfigurationSelection.truemodel.model}}</h2>
-                            <h3>回收最高价：<span> ￥{{$store.state.ConfigurationSelection.truemodel.peakPrice}}</span></h3>
+                            <h2>苹果 15年 13寸 MacBook Air</h2>
+                            <h3>回收最高价：<span> ￥4，999</span></h3>
                         </div>
                     </div>
                     <div class="bannerRight">
                         <ul>
                             <li><Choose1/></li>
+                            <li><Choose2/></li>
                         </ul>
                     </div>
                 </div>
@@ -24,10 +25,10 @@
 </template>
 
 <script>
-    import Vue from 'vue'
-    import Head from '@/components/currency/page-top-min.vue'
+    import Head from '../../common/head'
     import Choose1 from '../../components/choose/choose-one'
-    import Foot from '@/components/currency/page-bottom.vue'
+    import Choose2 from '../../components/choose/choose-two'
+    import Foot from '../../common/foot'
 
     export default {
         name: 'selection',
@@ -39,10 +40,8 @@
         components: {
             Head,
             Choose1,
+            Choose2,
             Foot
-        },
-        mounted(){
-            this.$store.dispatch("getTitle")
         }
     }
 </script>
@@ -110,29 +109,17 @@
                     height:521px;
                     margin-top:132px;
                     margin-left: 310px;
-                    li {
-                        margin-bottom: 10px;
-                        .el-select {
-                            width: 520px;
-                        }
+                    .el-select{
+                        width:520px;
                     }
                 }
             }
         }
     }
-    .fromselect{
-        border:none;
-        border-radius:0px;
-        box-shadow: 0 0 0 0;
-        background: #E3E3E3;
+    .el-select-dropdown{
+        background:#E3E3E3 ;
         .el-scrollbar{
-            background: #E3E3E3;
-            border:none;
-            border-radius:0px;
-            box-shadow: 0 0 0 0;
-
             .el-select-dropdown__item{
-                float: none;
                 width: 520px;
                 height: 50px;
                 background: #000;

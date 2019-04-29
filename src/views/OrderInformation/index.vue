@@ -9,7 +9,7 @@
                         <h6>您的信息</h6>
                         <h6>账号详情</h6>
                         <h6>您的地址</h6>
-                        <!--                        <p>{{ $store.state.OrderInformation.getProvinceList}}</p>-->
+                        <!--                                                <p>{{ $store.state.OrderInformation.getProvince}}</p>-->
                     </div>
                     <div id="con_cen_true_right">
                         <el-form ref="form" :model="form" label-width="80px">
@@ -29,7 +29,7 @@
                                     <el-option label="女士" value="women"></el-option>
                                 </el-select>
                                 <el-input v-model="form.familyName" style="width:384px;padding-left:11px"></el-input>
-                                <el-input v-model="form.name"
+                                <el-input v-model="form.trueName"
                                           style="width:384px;padding-left:11px;padding-right:20px;"></el-input>
                             </p>
                             <p>
@@ -82,32 +82,42 @@
                             </p>
                             <!--                           下p 14-->
                             <p>
-                                <el-select v-model="form.provinceList"
+                                <el-select v-model="form.province"
                                            placeholder="省份/直辖市"
-                                           style="width:268px;margin-right:46px;">
+                                           style="width:268px;margin-right:46px;"
+                                           @change="$store.dispatch('City',form.province)"
+                                           popper-class="dropDown_province">
                                     <el-option
-                                            v-for="item in $store.state.OrderInformation.getProvinceList"
-
+                                            v-for="item in $store.state.OrderInformation.Province"
+                                            :value="item.provinceid"
                                             :key=item.id
                                             :label=item.province>
                                     </el-option>
                                 </el-select>
                                 <el-select v-model="form.city" placeholder="市"
-                                           style="width:268px;margin-right:46px;">
-                                    <el-option label="先生" value="man"></el-option>
-                                    <el-option label="女士" value="women"></el-option>
+                                           style="width:268px;margin-right:46px;"
+                                           @change="$store.dispatch('Area',form.city)"
+                                           popper-class="dropDown_city110100">
+                                    <el-option v-for="item in $store.state.OrderInformation.City"
+                                               :value="item.cityid"
+                                               :key=item.id
+                                               :label=item.city></el-option>
+
                                 </el-select>
                                 <el-select v-model="form.area" placeholder="县/区"
-                                           style="width:268px">
-                                    <el-option label="先生" value="man"></el-option>
-                                    <el-option label="女士" value="women"></el-option>
+                                           style="width:268px"
+                                           popper-class="dropDown_area">
+                                    <el-option v-for="item in $store.state.OrderInformation.Area"
+                                               :value="item.area"
+                                               :key=item.id
+                                               :label=item.area></el-option>
                                 </el-select>
                             </p>
                             <p>
                                 <span>详细信息</span>
                             </p>
                             <p>
-                                <el-input v-model="form.address" style="width:890px;margin-left:5px;"></el-input>
+                                <el-input v-model="form.address1" style="width:890px;margin-left:5px;"></el-input>
                             </p>
                             <el-checkbox-group v-model="form.addr">
                                 <el-checkbox label="这是我的默认地址" name="type"></el-checkbox><br>
@@ -122,11 +132,7 @@
                             <!--                            此处隐私政策应该有------------------我们的隐私政策地址-------->
                             <p>点击以上按钮代表您接收我们的<a href="">隐私政策</a></p>
                         </el-form>
-
                     </div>
-
-
-
                 </div>
                 <div id="con_cen_middle"></div>
                 <div id="con_cen_bottom"></div>
@@ -143,9 +149,12 @@
     import pageBottom from '@/components/currency/page-bottom.vue'
     import Vue from 'vue';
 
-
+    let url = {
+        url:150000
+    };
+    // console.log(provinceList);
     export default {
-        name:"coupon",
+        // name:"coupon",
         components :{
             pageTop,
             pageBottom,
@@ -155,32 +164,32 @@
                 form: {
                     sexe: '',
                     familyName: '',
-                    name: '',
+                    trueName: '',
                     nationality: '',
                     birthday: '',
-                    internationalCode: '',
+                    internationalAreaCode: '',
                     phone: '',
                     email: '',
-                    provinceList:'',
+                    province:'',
                     city:'',
                     area:'',
-                    address:'',
+                    address1:'',
                     addr:'',
                 },
-                phoneNum:{num:form.phone},
-                options: $store.state.OrderInformation.getProvinceList,
+
+                // phoneNum:{num:phone},
+                // options: this.$store.state.OrderInformation.getProvince,
+                // provinceid:"",
             }
         },
-        mounteds:{
+        methods:{
             onSubmit(){
-                console.log('submit!' + form)
+                this.$store.dispatch("setOrder",this.form);
+                console.log('submit!' + this.form.sexe)
             },
         },
         mounted(){
-            // this.$store.dispatch("getOrder");
-            // this.$store.dispatch("getTitle");
-            this.$store.dispatch("getProvinceList");
-            // console.log( $store.state.OrderInformation.getProvinceList)
+            this.$store.dispatch("Province");
         }
     }
 </script>
@@ -269,6 +278,36 @@
             .el-scrollbar__view{
                 .el-select-dropdown__item{
                     @include dropDown(260px);
+                }
+            }
+        }
+    }
+         .dropDown_province{
+             /*width:400px;*/
+             .el-scrollbar{
+                 .el-scrollbar__view{
+                     .el-select-dropdown__item{
+                         @include dropDown(268px);
+                     }
+                 }
+             }
+         }
+       .dropDown_city110100{
+           /*width:400px;*/
+           .el-scrollbar{
+               .el-scrollbar__view{
+                   .el-select-dropdown__item{
+                       @include dropDown(268px);
+                   }
+               }
+           }
+       }
+    .dropDown_area{
+        /*width:400px;*/
+        .el-scrollbar{
+            .el-scrollbar__view{
+                .el-select-dropdown__item{
+                    @include dropDown(268px);
                 }
             }
         }

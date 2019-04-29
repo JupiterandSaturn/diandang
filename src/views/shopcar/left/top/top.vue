@@ -1,7 +1,7 @@
 <template>
-<div class='top'>
-    <ul>
-        <li><input type='checkbox'></li>
+<div class='left_top'>
+    <ul class='up'>
+        <li><input type='checkbox' class='top_box'></li>
         <li><span> 全选</span></li>
         <li class='one'>|</li>
         <li><span> 删除 </span></li>
@@ -14,7 +14,7 @@ export default {
               }
 </script>
 <style scope>
-.top input{
+.left_top .top_box{
             margin-left:33px;
             margin-top:55px;
             width:18px;
@@ -22,12 +22,12 @@ export default {
             background:rgba(255,255,255,1);
             opacity:1;
             } 
-.top .one{
+.left_top .up .one{
            margin-left:10px;
            margin-top:52px;
            color:rgba(135,135,135,1);
-         } 
-.top ul li span{
+            } 
+.left_top .up li span{
                 width:28px;
                 height:19px;
                 font-size:14px;

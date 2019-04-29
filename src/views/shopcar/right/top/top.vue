@@ -6,24 +6,35 @@
         </div>
         <div class='two'>
         <p class='to1'>商品总计
-            <span>￥</span>
+            <span>{{$store.state.shopcar.total | currency}}</span>
         </p>
         <p class='to2'>运费
             <span>免费</span>
         </p>
         <p class='to3'>总计
-            <span>￥</span>
+            <span>{{$store.state.shopcar.total | currency}}</span>
         </p>
         </div>
         <div class='three'>
-        <input class='tr1' type='button' value='立即结算'>
-        <input class='tr2' type='button' value='继续添加'>
+        <input class='tr1' type='button' value='立即结算' @click="toOrder">
+        <input class='tr2' type='button' value='继续添加'  @click="toThird">
         </div>
     </div>
 </template>
 <script>
 export default {
      name:'top',
+     methods:{
+         toThird(){
+                this.$router.push('/Second')
+         },
+         toOrder(){
+             this.$router.push('/personalInformation')
+         }
+     },
+        mounted(){
+        this.$store.dispatch("getShopCar")
+    }
 
 }
 </script>

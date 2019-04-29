@@ -1,6 +1,6 @@
 <template>
-    <div class='main'>
-        <div class='main_1'>
+    <div class='shopcar'>
+        <div class='main'>
             <Left class="main_left"></Left>
             <Right class="main_right"></Right>
         </div>
@@ -24,29 +24,29 @@ export default {
     margin:0;
     padding:0;
   }
-ul li{
+.shopcar ul li{
     text-decoration: none;
     list-style:none;
     float:left;
   }
-ol li{
+.shopcar ol li{
    text-decoration: none;
    list-style:none;
    float:left;
  }
   
-a{
+.shopcar a{
  text-decoration:none;
 }
 .body{
       width: 100%;
 }
-.main{
+.shopcar{
       height:961px;
       width:100%;
       display: inline-block;
      }
-.main .main_1{
+.shopcar .main{
               width:1330px;
               height:925px;
               background:rgba(231,231,231,1);
@@ -54,13 +54,13 @@ a{
               margin:0 auto;
               margin-top:18px;
               }
-.main_left{
+.shopcar .main_left{
                  width:859px;
                  height:925px;
                  float:left;
                  margin-left:33px;
                  } 
-.main_right{
+.shopcar .main_right{
                   width:399px;
                   height:925px;
                   float:right;

@@ -3,29 +3,65 @@ import bus from '@/bus'
 export default({
     state:{
         setOrder:[],
-        getProvinceList:[],
+        Province:[],
+        City:[],
+        Area:[],
     },
     mutations:{
         SET_PROVINCE(state,obj){
-            state.getProvinceList = obj;
+            state.Province = obj;
+        },
+        SET_CITY(state,obj){
+            state.City = obj;
+        },
+        SET_AREA(state,obj){
+            state.Area = obj;
         }
     },
     actions:{
-        setOrder(){
-            bus.$axios.post("/user/user/addUserInfo")
+        setOrder({commit},obj){
+            bus.$axios.post("/user/user/addUserInfo",{
+                userId:1,
+                familyName: obj.familyName,
+                name: obj.trueName,
+                nationality : obj.nationality,
+                phone : obj.phone,
+                email : obj.email,
+                sex : obj.sexe,
+                birthday : obj.birthday,
+            })
                 .then(({data})=>{
-                    this.state.order = data.code;
-                    console.log(this.state.order);
+                    console.log(data);
                 })
         },
-        getProvinceList({commit}){
+        Province({commit}){
             bus.$axios.post("user/address/provinceList")
                 .then(({data})=>{
-                    // this.state.getProvinceList = data.province;
+                    // console.log('进入getProvinceList')
+                    this.state.Province = data.province;
                     console.log(data.province);
                     commit("SET_PROVINCE",data.province)
                 })
-
+        },
+        City({commit},province){
+            // console.log(11111111111111111);
+            bus.$axios.post("user/address/city/" + province)
+                .then(({data})=>{
+                    // console.log(11111111111111111);
+                    this.state.City = data;
+                    console.log(data.city);
+                    commit("SET_CITY",data.city);
+                })
+        },
+        Area({commit},city){
+            // console.log(11111111111111111);
+            bus.$axios.post("user/address/area/" + city)
+                .then(({data})=>{
+                    console.log(11111111111111111);
+                    this.state.Area = data.area;
+                    console.log(data.area);
+                    commit("SET_AREA",data.area);
+                })
         }
 
     }

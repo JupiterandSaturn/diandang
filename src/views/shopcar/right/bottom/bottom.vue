@@ -1,19 +1,24 @@
 <template>
-    <div class='rg_btm'>
+    <div class='right_btm'>
         <div class='one'>
             <p>免费配送</p>
+            
         </div>
         <div class='two'>
-            <p>需要帮助？</p>
+            <span>需要帮助？</span>
+            <a href='#'>+</a>
         </div>
         <div class='three'>
-            <p>退款方式</p>
+            <span>退款方式</span>
+            <a href='#'>+</a>
         </div>
         <div class='four'>
-            <p>退换货政策</p>
+            <span>退换货政策</span>
+            <a href='#'>+</a>
         </div>
         <div class='five'>
-            <p>取件方式</p>
+            <span>退换货政策</span>
+            <a href='#'>+</a>
         </div>
    </div>
 </template>
@@ -23,13 +28,14 @@ export default {
             }
 </script>
 <style scope>
-.rg_btm .one{
+.right_btm .one{
                           width:399px;
                           height:67px;
                           border-bottom:1px solid rgba(200,200,200,1);
                           opacity:1;
+                          margin:0 auto;
                         }
-.rg_btm .one p{
+.right_btm .one p{
                             width:56px;
                             height:19px;
                             font-size:14px;
@@ -41,14 +47,16 @@ export default {
                             margin-left:187px;
                             line-height: 67px;
                             text-align: center;
-                          }                       
-.rg_btm .two{
+                          }  
+                    
+.right_btm .two{
                           width:399px;
                           height:68px;
                           border-bottom:1px solid rgba(200,200,200,1);
                           opacity:1;
                          }  
-.rg_btm .two p{
+.right_btm .two span{
+                            display: inline-block;
                             font-size:14px;
                             font-family:Microsoft YaHei;
                             font-weight:400;
@@ -57,14 +65,22 @@ export default {
                             opacity:1;
                             margin-left:57px;
                             padding-top:24px;
-                          }                                              
-.rg_btm .three{
+                          } 
+.right_btm .two a{
+                   margin-left:237px;
+                   width:10px;
+                    height:0px;
+                    /* border:2px solid rgba(112,112,112,1); */
+                    opacity:1;
+                  }                                              
+.right_btm .three{
                           width:399px;
                           height:64px;
                           border-bottom:1px solid rgba(200,200,200,1);
                           opacity:1;
                           } 
-.rg_btm .three p{
+.right_btm .three span{
+                            display: inline-block;
                             font-size:14px;
                             font-family:Microsoft YaHei;
                             font-weight:400;
@@ -74,13 +90,21 @@ export default {
                             margin-left:57px;
                             padding-top:22px;
                           } 
-.rg_btm .four{
+.right_btm .three a{
+                   margin-left:244px;
+                   width:10px;
+                    height:0px;
+                    /* border:2px solid rgba(112,112,112,1); */
+                    opacity:1;
+                  }                          
+.right_btm .four{
                           width:399px;
                           height:68px;
                           border-bottom:1px solid rgba(200,200,200,1);
                           opacity:1;
                          } 
-.rg_btm .four p{
+.right_btm .four span{
+                           display: inline-block;
                           font-size:14px;
                           font-family:Microsoft YaHei;
                           font-weight:400;
@@ -89,14 +113,22 @@ export default {
                           opacity:1;
                           margin-left:57px;
                           padding-top:25px;
-                        }                          
-.rg_btm .five{
+                        } 
+.right_btm .four a{
+                   margin-left:230px;
+                   width:10px;
+                    height:0px;
+                    /* border:2px solid rgba(112,112,112,1); */
+                    opacity:1;
+                  }                                                 
+.right_btm .five{
                           width:399px;
                           height:66px;
                           border-bottom:1px solid rgba(200,200,200,1);
                           opacity:1;
                           } 
-.rg_btm .five p{
+.right_btm .five span{
+                           display: inline-block;
                             font-size:14px;
                             font-family:Microsoft YaHei;
                             font-weight:400;
@@ -105,6 +137,13 @@ export default {
                             opacity:1;
                             margin-left:57px;
                             padding-top:24px;
-                          }                          
+                          } 
+.right_btm .five a{
+                   margin-left:230px;
+                   width:10px;
+                    height:0px;
+                    /* border:2px solid rgba(112,112,112,1); */
+                    opacity:1;
+                  }                                                   
 
 </style>
