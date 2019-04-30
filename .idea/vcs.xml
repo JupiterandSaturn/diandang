@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/diandang" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/views/Home/section" vcs="Git" />
   </component>
 </project>

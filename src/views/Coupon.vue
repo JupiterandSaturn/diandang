@@ -33,6 +33,7 @@ import pageBottom from '@/components/currency/page-bottom.vue'
 
 export default {
   name:"coupon",
+ 
   components :{
     pageTop,
     pageBottom

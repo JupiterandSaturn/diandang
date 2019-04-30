@@ -25,6 +25,7 @@ export default({
     
     
 })
+<<<<<<< HEAD
 // getTop(){
 //     bus.$axios.post('./pawn/type/header')
 //     .then(({data})=>{
@@ -52,3 +53,6 @@ export default({
 
 //     })
 // }
+=======
+
+>>>>>>> 20668755e494c806b4864034dc634c898f1aa306

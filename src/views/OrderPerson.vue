@@ -26,47 +26,34 @@
 				</ul>
 				<div class="cancel-list">取消订单</div>
 				
-				<ul class="order-content">
+				<ul class="order-content" v-for="item in $store.state.orderperson.listMsg">
 					<li class="order-list-pic">
-						<img src="../assets/orderperson/goodslist.png" alt="" />
+						<img :src="item.productsAddress" alt="" />
 					</li>
 					<li>
 						<ol class="order-msg-list">
-							<li>苹果</li>
-							<li>Mac book pro</li>
-							<li>2015年</li>
+							<li>{{item.brandName}}</li>
+							<li>{{item.model}}</li>
+							<li>{{item.releaseTime}}</li>
 						</ol>
 					</li>
-					<li class="get-package">预计***日上门取件</li>
-					<li class="goods-Num">数量:1</li>
-					<li class="goods-total">￥4，999</li>
+					<li class="get-package">预计{{item.orderTime}}日上门取件</li>
+					<li class="goods-Num">数量:{{item.number}}</li>
+					<li class="goods-total">{{item.price|currency}}</li>
 				</ul>
-				<ul class="order-content">
-					<li class="order-list-pic">
-						<img src="../assets/orderperson/goodslist.png" alt="" />
-					</li>
-					<li>
-						<ol class="order-msg-list">
-							<li>苹果</li>
-							<li>Mac book pro</li>
-							<li>2015年</li>
-						</ol>
-					</li>
-					<li class="get-package">预计***日上门取件</li>
-					<li class="goods-Num">数量:1</li>
-					<li class="goods-total">￥4，999</li>
-				</ul>
+				
+                
 				<ul class="order-list-total">
 				
 					<li class="goods-allNum">运费<span>免费</span></li>
-					<li class="goods-allTotal">总计<span>￥4，999</span></li>
+					<li class="goods-allTotal">总计<span>{{$store.state.orderperson.total|currency}}</span></li>
 				</ul>
 				<ul class="order-address">
 				
 					<li class="get-address">取货地址</li>
 					<li class="user-msg"><dl>
 						<dt class="user-name">刘**</dt>
-						<dd class="user-address">北京市昌平区北京职业科技学院</dd>
+						<dd class="user-address">{{$store.state.orderperson.listMsg[0].province}}{{$store.state.orderperson.listMsg[0].city}}{{$store.state.orderperson.listMsg[0].detailed}}</dd>
 						<dd class="user-phone">+86 1774771****</dd>
 					</dl></li>
 					<li class="ems-way"><dl>
@@ -85,14 +72,17 @@
 
 
 <script>
-import pageTop from    '@/components/currency/page-top.vue'
+import pageTop from '@/components/currency/page-top.vue'
 import pageBottom from '@/components/currency/page-bottom.vue'
 
 export default {
   name:"orderperson",
-  components :{
+  mounted(){
+      this.$store.dispatch('listShow')
+  },
+  components:{
     pageTop,
-    pageBottom,
+    pageBottom
    
   }
 }
@@ -279,15 +269,19 @@ export default {
         }
         .order-list-pic {
             margin: 4px 18px 2px 46px;
+            img{
+                width:150px;
+                height:150px;
+            }
         }
         .get-package {
             margin: 38px 0 0 210px;
-            width: 118px;
+            width: 170px;
             font-size: 14px;
             color: rgba(135, 135, 135, 1);
         }
         .goods-Num {
-            margin: 38px 0 0 152px;
+            margin: 38px 0 0 98px;
             width: 40px;
             font-size: 14px;
         }
