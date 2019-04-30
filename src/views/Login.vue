@@ -3,17 +3,15 @@
 <pageTop></pageTop>
 <div id="content">
    <h3>登录</h3>
-
-   <div class="content-logo"><img src="../assets/login/login2.png" alt=""></div>
-   
+   <div class="content-logo"><img src="../assets/login/login2.png" alt=""></div> 
    <div class="content-login">
        <div class="context-login-list">
            <span>用户账号</span>
-           <input type="text" name="" id="">
+           <input type="text" name="" id="" v-model="userName">
            <span>密码</span>
-           <input type="text" name="" id="">
-           <p><input type="checkbox" name="check"  id="check" value="十天免密登录">十天免密登录</p>
-            <input type="button"name="btn" id="btn" value="登录">
+           <input type="password" name="" id="" v-model="passWord">
+           <p><input type="checkbox" name="check"  id="check" v-model="rememberMe" value="记住我">记住我</p>
+            <input type="button"name="btn" id="btn" @click="userLogin"  value="登录">
             <a href="javascript:;">忘记密码?</a>
        </div>
      
@@ -22,17 +20,32 @@
 </div>
 <pageBottom></pageBottom>
 </div>
-
 </template>
-
-
 <script>
 import register from '@/components/register/index.vue'
 import pageTop from    '@/components/currency/page-top-min.vue'
 import pageBottom from '@/components/currency/page-bottom.vue'
-
 export default {
   name:"login",
+  data(){
+      return {
+        userName:"",
+        passWord:"",
+        rememberMe:"true"
+      }
+  },
+  methods:{
+    userLogin(){
+         this.$store.dispatch("userLogin",{
+        data:{
+          username:this.userName,
+          password:this.passWord,
+          rememberMe:this.rememberMe
+        }
+      })
+    }
+     
+  },
   components :{
     pageTop,
     pageBottom,
@@ -40,10 +53,6 @@ export default {
   }
 }
 </script>
-
-
-
-
 
 
 <style lang="scss" scoped>

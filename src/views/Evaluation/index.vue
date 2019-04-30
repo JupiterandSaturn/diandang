@@ -4,18 +4,18 @@
         <div class="E_banner">
             <div class="E_banner1">
                 <div class="firstName">
-                    <p>手机典当<span>三星</span></p>
+                    <p>{{$store.state.ConfigurationSelection.evamodel.typeName}}<span>{{$store.state.ConfigurationSelection.evamodel.brandName}}</span></p>
                 </div>
                 <div class="E_banner2">
                     <div class="bannerLeft">
                         <div class="imgBox">
-                            <img :src="imgUrl" alt="">
+                            <img :src="$store.state.ConfigurationSelection.evamodel.data.productsAddress" alt="">
                         </div>
                     </div>
                     <div class="bannerRight">
                         <div class="bannerRightShow">
-                            <h1>三星 Galaxy S8+</h1>
-                            <h2>￥ 4，999</h2>
+                            <h1>{{$store.state.ConfigurationSelection.evamodel.data.model}}</h1>
+                            <h2>{{Math.ceil($store.state.ConfigurationSelection.evamodel.data.price)}}</h2>
                             <ul>
                                 <li><span></span>价格公道</li>
                                 <li><span></span>服务快捷</li>
@@ -43,7 +43,6 @@
         name: 'evaluation',
         data(){
           return{
-             imgUrl:require("../../assets/Evaluation/shop@2x.png"),
           }
         },
         components: {
@@ -51,6 +50,10 @@
 
 
             Foot
+        },
+        mounted(){
+            // this.$store.dispatch("getTitle");
+            // this.$store.dispatch("setTitle");
         }
     }
 </script>
@@ -139,6 +142,7 @@
                         ul{
                             overflow: hidden;
                             border-top:1px solid #000;
+                            float: none;
                             li{
                                 float: left;
                                 margin:12px 45px;
