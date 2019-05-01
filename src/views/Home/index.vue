@@ -27,7 +27,7 @@ export default {
          Nav,
          Section,
          Foot,
-         Head
+         Head,
      },
      mounted(){
         

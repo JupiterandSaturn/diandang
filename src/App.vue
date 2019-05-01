@@ -24,8 +24,13 @@
 
 <script>
 
+import HomePage from './components/homepage/index'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components:{
+    HomePage
+  }
 }
 </script>
 

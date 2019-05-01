@@ -1,5 +1,6 @@
 <template>
   <div class="main_left">
+        <top class="left_top"></top>
         <middle class="left_middle"></middle>
   </div>
 </template>
@@ -11,7 +12,7 @@ import top from './top/top.vue'
 export default {
   name: 'app',
   components: {
-    middle
+    middle,top
   }
 }
 </script>
@@ -30,8 +31,7 @@ export default {
                           } 
 .main_left .left_middle{
                               width:859px;
-                              height:232px;
-                            
+                              height:342px;
                               border-bottom:1px solid rgba(200,200,200,1);
                               } 
 </style>

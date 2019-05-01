@@ -1,8 +1,4 @@
 <template>
-<<<<<<< HEAD
-     <div class='left_middle'>
-        <ol>
-=======
 <div>
     <div class='left_top'>
         <ul class='up'>
@@ -14,7 +10,6 @@
 </div>
      <div class='left_middle'v-for="item in $store.state.shopcar.goodsMsg">
         <ol >
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
             <li><input class='two' type='checkbox'></li>
             <li><div class='nav'><img :src="item.productsAddress" alt=""></div></li>
             <li>
@@ -26,26 +21,14 @@
                 <a class='mid_4' href='#' @click="delGood(item.id)">删除</a>
             </li>
             <li><span class='sp2'></span></li>
-<<<<<<< HEAD
-            <li><input class='three' type='text' value="数量"></li>               
-            <li><span class='sp3'>总价</span></li>
-        </ol>
-=======
             <li><input class='three' type='button'  value="数量:1"></li>               
             <li><span class='sp3'>总价{{item.price|currency}}</span></li>
         </ol>
     </div>
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
     </div>
 </template>
 <script>
 export default {
-<<<<<<< HEAD
-    name:'middle'
-        }
-</script>
-<style scope>
-=======
     name:'middle',
     data(){
         return{
@@ -101,7 +84,6 @@ export default {
                 margin-left:19px;
                 margin-top:53px;
                }  
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
 .left_middle ol .two{
                     width:18px;
                     height:18px;
@@ -117,11 +99,6 @@ export default {
                 margin-left:19px;
                 margin-top:10px;
                 } 
-<<<<<<< HEAD
-.left_middle ol li h6{
-                    width:28px;
-                    height:19px;
-=======
 /* .left_middle ol .nav img{
                width:219px;
                 height:324px;
@@ -129,19 +106,13 @@ export default {
 .left_middle ol li h6{
                     width:90px;
                     text-align: center;
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
                     font-size:14px;
                     color:rgba(5,5,5,1);
                     opacity:1;
                     margin-top:74px;
                     } 
 .left_middle ol .mid_1{
-<<<<<<< HEAD
-                    width:90px;
-                    height:19px;
-=======
                     width:90px; 
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
                     font-size:14px;
                     color:rgba(135,135,135,1);
                 } 
@@ -151,12 +122,7 @@ export default {
                     color:rgba(135,135,135,1);
                     } 
 .left_middle ol .mid_3{
-<<<<<<< HEAD
-                    width:28px;
-                    height:19px;
-=======
                     width:28px;        
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
                     font-size:14px;
                     color:rgba(5,5,5,1);
                     display: inline-block;

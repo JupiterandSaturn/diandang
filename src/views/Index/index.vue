@@ -1,19 +1,15 @@
 <template>
     <div>
-        <pageTop></pageTop>
-
+        <Head></Head>
         <Content></Content>
         <Middle></Middle>
         <Nav></Nav>
         <Section></Section>
         <Foot></Foot>
-  
     </div>
 </template>
 <script>
 // import Head from '@/common/head/index.vue'
-import pageTop from '@/components/currency/page-top-min.vue'
-
 import Content from './content/content.vue'
 import Middle from './middle/middle.vue'
 import Nav from './nav/nav.vue'
@@ -24,8 +20,7 @@ import Foot from '@/common/foot/index.vue'
 export default {
      name:'',
      components:{
-        pageTop,
-    
+        //  Head,
          Content,
          Middle,
          Nav,

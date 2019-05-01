@@ -5,22 +5,16 @@
             <div class="CS_banner1">
                 <div class="CS_banner2">
                     <div class="bannerLeft">
-<<<<<<< HEAD
                         <div class="imgBox" >
                             <img :src=$store.state.ConfigurationSelection.truemodel.productsAddress alt="">
                             <h2>{{$store.state.ConfigurationSelection.truemodel.model}}</h2>
                             <h3>回收最高价：<span> ￥{{$store.state.ConfigurationSelection.truemodel.peakPrice}}</span></h3>
-=======
-                        <div class="imgBox">
-                            <img :src="imgUrl" alt="">
-                            <h2>苹果 15年 13寸 MacBook Air</h2>
-                            <h3>回收最高价：<span> ￥4，999</span></h3>
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
                         </div>
                     </div>
                     <div class="bannerRight">
                         <ul>
                             <li><Choose1/></li>
+                            <li><Choose2/></li>
                         </ul>
                     </div>
                 </div>
@@ -31,36 +25,25 @@
 </template>
 
 <script>
-    import Head from '../../common/head'
+    import Vue from 'vue'
+    import Head from '@/components/currency/page-top-min.vue'
     import Choose1 from '../../components/choose/choose-one'
-<<<<<<< HEAD
     import Foot from '@/components/currency/page-bottom.vue'
-=======
-    import Choose2 from '../../components/choose/choose-two'
-    import Foot from '../../common/foot'
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
 
     export default {
         name: 'selection',
         data(){
           return{
-<<<<<<< HEAD
 
-=======
-              imgUrl:require("../../assets/ConfigurationSelection/juxing15@2x.png"),
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
           }
         },
         components: {
             Head,
             Choose1,
             Foot
-<<<<<<< HEAD
         },
         mounted(){
             this.$store.dispatch("getTitle");
-=======
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
         }
     }
 </script>
@@ -138,7 +121,6 @@
             }
         }
     }
-<<<<<<< HEAD
     .fromselect{
         border:none;
         border-radius:0px;
@@ -150,11 +132,6 @@
             border-radius:0px;
             box-shadow: 0 0 0 0;
 
-=======
-    .el-select-dropdown{
-        background:#E3E3E3 ;
-        .el-scrollbar{
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
             .el-select-dropdown__item{
                 float: none;
                 width: 520px;

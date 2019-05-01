@@ -8,28 +8,15 @@ import axios from "axios";
 import login from "@/views/Login.vue";
 import '../public/font_aboutUs/iconfont.css';
 import 'element-ui/lib/theme-chalk/index.css';
-import filters from "@/filters"
-
+import '../theme/index.css'
 
 Vue.config.productionTip = false;
 Vue.prototype.$axios = axios;
 Vue.use(ElementUI);
-<<<<<<< HEAD
-
-=======
-for(var key in filters){
-  Vue.filter(key,filters[key])
-}
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
 
 axios.interceptors.request.use(config=>{
   
   config.url="/diandang" + config.url;
-  return config;
-})
-
-axios.interceptors.request.use(config=>{
-  config.url="/diandang" +config.url;
   return config;
 })
 

@@ -4,10 +4,6 @@ import AboutUs from '../views/aboutUs/index.vue'
 import Login from '@/views/Login.vue'
 import OrderPerson from "@/views/OrderPerson.vue"
 import Shopcar from '../views/shopcar/shopcar.vue'
-<<<<<<< HEAD
-=======
-import index from '@/views/Index/index.vue'
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
 import Success from '../views/Success/Success.vue'
 import ConfigurationSelection from '../views/ConfigurationSelection/index.vue'
 import Evaluation from '../views/Evaluation/index.vue'
@@ -55,11 +51,7 @@ export default new Router({
       // this generates a separate chunk (coupon.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: function () { 
-<<<<<<< HEAD
         return import(/* webpackChunkName: "coupon" */ '@/views/coupon/index.vue')
-=======
-        return import(/* webpackChunkName: "coupon" */ '@/views/Coupon')
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
       }
     },
     {
@@ -98,20 +90,10 @@ export default new Router({
       name:'orderInformation',
       component:function () {
         return import( '@/views/OrderInformation')
-<<<<<<< HEAD
-=======
-      }
-    },
-    {
-      path:'/form',
-      name:'form',
-      component:function () {
-        return import( '@/views/form.vue')
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
       }
     },
 
-     
+
     {
       name:"shopcar",
       path:"/shopcar",

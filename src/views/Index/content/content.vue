@@ -11,8 +11,8 @@ export default {
         return{
             pic:[
               require('../../../../public/images/imgPersonal/round1.png'),
-              require('../../../../public/images/imgPersonal/banner2.png'),
-              require('../../../../public/images/imgPersonal/banner3.png')
+              require('../../../assets/logo.png'),
+              require('../../../assets/logo.png')
             ]   
         }
     }
@@ -24,7 +24,7 @@ export default {
     color: #475669;
     font-size: 18px;
     opacity: 0.75;
-    line-height: 400px;
+    line-height: 500px;
     margin: 0;
   }
   

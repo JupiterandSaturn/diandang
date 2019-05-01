@@ -55,7 +55,6 @@ export default {
             template:`<div>five</div>`
         },
       }
-}
 
 </script>
 
@@ -66,3 +65,4 @@ export default {
              background:red
             }
 </style>
+

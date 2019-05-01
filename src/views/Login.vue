@@ -43,10 +43,6 @@ export default {
           rememberMe:this.rememberMe
         }
       })
-<<<<<<< HEAD
-=======
-  
->>>>>>> 20668755e494c806b4864034dc634c898f1aa306
     }
      
   },
