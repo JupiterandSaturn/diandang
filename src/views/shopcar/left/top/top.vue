@@ -15,16 +15,16 @@ export default {
 </script>
 <style scope>
 .left_top .top_box{
-            margin-left:33px;
-            margin-top:55px;
+            margin-left:30px;
+            margin-top:49.5px;
             width:18px;
             height:18px;
             background:rgba(255,255,255,1);
             opacity:1;
             } 
 .left_top .up .one{
-           margin-left:10px;
-           margin-top:52px;
+           margin-left:9px;
+           margin-top:47px;
            color:rgba(135,135,135,1);
             } 
 .left_top .up li span{

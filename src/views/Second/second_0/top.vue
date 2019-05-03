@@ -2,8 +2,8 @@
     <div class='main'>
        <div class='main_1'>
            <ul>
-                <li v-for="item in $store.state.second.typename">
-                    <img src="../../../../public/images/imgPersonal/9.png">
+                <li v-for="(item,index) in $store.state.second.typename" :key="index" @click="handleRouter(item.typeId)">
+                    <img :src=item.image >
                     <p>{{item.typeName}}</p> 
                 </li>
            </ul> 
@@ -12,11 +12,14 @@
 </template>
 <script>
 
-import vuex from "vuex"
-// import store from '../../../store/second/index.js'
 export default {
          mounted(){
              this.$store.dispatch('getTop')
+         },
+         methods:{
+           handleRouter(id){
+               this.$store.dispatch("getMiddle",{limit:8,offset:0,typeId:id})
+             } 
          }
         
 }

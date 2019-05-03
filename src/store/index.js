@@ -1,13 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-<<<<<<< HEAD
-// import HomePage from './index'
+import HomePage from './HomePage'
 import second from './second'
-=======
+import third from './third'
 import ConfigurationSelection from './ConfigurationSelection'
 import OrderInformation from './OrderInformation'
 
->>>>>>> e4be65c317689ce24d3bd017597bc926f7cb889d
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -20,13 +19,13 @@ export default new Vuex.Store({
   actions: {
 
   },
+
   modules:{
-<<<<<<< HEAD
-    //  HomePage,
-     second
-=======
+    HomePage,
+     second,
+     third,
     ConfigurationSelection,
-    OrderInformation,
->>>>>>> e4be65c317689ce24d3bd017597bc926f7cb889d
+    OrderInformation
+
   }
 })

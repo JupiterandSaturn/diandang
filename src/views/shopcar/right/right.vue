@@ -19,15 +19,15 @@ export default {
 
 <style lang="scss" scope>
 .right_top{
-                  width:399px;
-                  height:426px;
+                  width:359px;
+                  height:383px;
                   background: white;
-                  margin-top:53px;
+                  margin-top:48px;
                   }
 .right_bottom{
-                    width:399px;
-                    height:337px;
+                    width:359px;
+                    height:303px;
                     background:white;
-                    margin-top:36px; 
+                    margin-top:32px; 
                   }
 </style>

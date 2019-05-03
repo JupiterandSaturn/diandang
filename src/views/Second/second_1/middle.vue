@@ -1,23 +1,43 @@
 <template>
      <div id="logo-list">
+         
             <ul>
-                <li v-for='item in $store.state.list'>
+                <li v-for="(item,index) in $store.state.second.goodslist" :key="index" @click="handeleDetail(item.typeId,item.brandId)">
                    <i>
-                       <img src="../../../../public/images/imgPersonal/10.png"><span></span>
-                    </i>
+                      <img :src="item.brandAddress"><span></span> 
+                  </i>
                     <p>{{item.typeName}}</p> 
-                </li>
+                </li> 
             </ul>
             <div id="logo-info-more">
-                <input type="button" value="加载更多">
+                <input type="button" value="加载更多" @click="moreChange">
             </div>
         </div> 
 </template>
 
 <script>
-import Vue from 'vue'
 export default {
+     data(){
+         return{
+            offset:0,
+         }
+     },
+     methods:{
+         moreChange(){
+             this.offset+=2;
+               this.$store.dispatch("getMiddle",{limit:8,offset:this.offset,typeId:this.$store.state.second.goodslist[0].typeId}); 
+         },
+         handeleDetail(typeid,brandid){
+             this.$router.push({path:'/third',query:{typeid,brandid}})
+         }
+         
+
+     },
       mounted(){
+         
+           this.$store.dispatch("getMiddle",{limit:8,offset:0,typeId:1});
+           this.$store.dispatch("getMiddleIndex");
+
           
       }
 }
@@ -89,6 +109,7 @@ export default {
     background: #E7E7E7;
     height:110px;
     line-height: 110px;
+    clear:both;
 }
 #logo-info-more input{
     width: 187px;

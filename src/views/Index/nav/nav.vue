@@ -34,7 +34,7 @@ export default {
 </script>
 <style less='' scope>
    .nav{
-            width:1330px;
+            width:1200px;
             height:675px;
             margin:0 auto;
             }  
@@ -90,7 +90,7 @@ export default {
                 float:right;
                 width:602px;
                 height:139px;
-                margin-right:139px;
+                margin-right:-9px;
                 margin-top:232px;
               }
    .nav .right p{

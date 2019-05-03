@@ -10,9 +10,9 @@ export default {
     data(){
         return{
             pic:[
-              require('../../../../public/images/imgPersonal/round1.png'),
-              require('../../../assets/logo.png'),
-              require('../../../assets/logo.png')
+              require('../../../assets/index/round1.png'),
+              require('../../../assets/index/banner2.png'),
+              require('../../../assets/index/banner3.png')
             ]   
         }
     }

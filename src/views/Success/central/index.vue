@@ -31,8 +31,8 @@ export default {
       height:750px;
       } */
 .central .center{
-              width:1366px;
-              height:750px;
+              width:1200px;
+              height:659px;
               margin: 0 auto;
              }
 .central .center .center_1{
@@ -64,12 +64,12 @@ export default {
                                 }
 .central .center .center_3{
                                 height:89px;
-                                width:1366px;
+                                width:1200px;
                                 display: inline-block
                                 }  
 .central .center .center_3 input{
-                                width:163px;
-                                height:45px;
+                                width:143px;
+                                height:39.5px;
                                 background:rgba(27,27,27,1);
                                 opacity:1;
                                 border:none;

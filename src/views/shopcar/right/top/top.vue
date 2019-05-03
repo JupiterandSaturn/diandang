@@ -29,8 +29,8 @@ export default {
 </script>
 <style scope>
 .rg_top .one{
-                width:340px;
-                height:61px;
+                width:306px;
+                height:55px;
                 border-bottom:1px solid rgba(200,200,200,1);
                 margin:0 auto;
                 }
@@ -42,8 +42,8 @@ export default {
                     line-height:19px;
                     color:rgba(135,135,135,1);
                     opacity:1;
-                    margin-left:28px;
-                    margin-top:26px;
+                    margin-left:25px;
+                    margin-top:23.5px;
                     } 
 .rg_top .one .rt_2{
                     display: inline-block;
@@ -53,12 +53,12 @@ export default {
                     line-height:19px;
                     color:rgba(5,5,5,1);
                     opacity:1;
-                    margin-top:26px;
-                    margin-left:167px;
+                    margin-top:23.5px;
+                    margin-left:135px;
                 } 
 .rg_top .two{
-                width:340px;
-                height:176px;
+                width:306px;
+                height:158px;
                 border-bottom:1px solid rgba(200,200,200,1);
                 margin:0 auto;
                 } 
@@ -70,8 +70,8 @@ export default {
                     line-height:19px;
                     color:rgba(5,5,5,1);
                     opacity:1;
-                    margin-left:27px;
-                    margin-top:26px;
+                    margin-left:24px;
+                    margin-top:23.5px;
                     } 
 .rg_top .two .to1 span{
                         display: inline-block;
@@ -80,10 +80,10 @@ export default {
                         font-size:16px;
                         font-family:Microsoft YaHei;
                         font-weight:400;
-                        line-height:21px;
+                        line-height:19px;
                         color:rgba(5,5,5,1);
                         opacity:1;
-                        margin-left:182px;
+                        margin-left:164px;
                         } 
 .rg_top .two .to2{
                     font-size:14px;
@@ -92,8 +92,8 @@ export default {
                     line-height:19px;
                     color:rgba(5,5,5,1);
                     opacity:1;
-                    margin-left:27px;
-                    margin-top:16px;
+                    margin-left:24px;
+                    margin-top:14px;
                     }
 .rg_top .two .to2 span{
                         display: inline-block;
@@ -105,7 +105,7 @@ export default {
                         line-height:19px;
                         color:rgba(135,135,135,1);
                         opacity:1;
-                        margin-left:252px;
+                        margin-left:204px;
                            } 
 .rg_top .two .to3{
                     font-size:14px;
@@ -114,54 +114,54 @@ export default {
                     line-height:19px;
                     color:rgba(5,5,5,1);
                     opacity:1;
-                    margin-left:27px;
-                    margin-top:30px;
+                    margin-left:24px;
+                    margin-top:27px;
                     }  
 .rg_top .two .to3 span{ 
                         display: inline-block;
-                        width:104px;
+                        /* width:94px; */
                         height:31px;
                         font-size:24px;
                         font-family:Microsoft YaHei;
                         font-weight:400;
-                        line-height:31px;
+                        line-height:28px;
                         color:rgba(5,5,5,1);
                         opacity:1;
-                        margin-top:19px;
-                        margin-left:176px;
+                        /* margin-top:17px; */
+                        margin-left:158px;
                         }
 .rg_top .three{
-                width:340px;
-                height:189px;
+                width:306px;
+                height:170px;
                 margin:0 auto;
                 }                               
 .rg_top .three .tr1{
                         display: inline-block;
-                        width:337px;
-                        height:47px;
+                        width:303px;
+                        height:42px;
                         background:rgba(27,27,27,1);
                         opacity:1;
-                        margin-top:35px;
+                        margin-top:31.5px;
                         font-size:14px;
                         font-family:Microsoft YaHei;
                         font-weight:400;
-                        line-height:19px;
+                        line-height:17px;
                         color:rgba(255,255,255,1);
                         opacity:1;
                         }
 
 .rg_top .three .tr2{
                     display: inline-block;
-                    width:337px;
-                    height:47px;
+                    width:303px;
+                    height:42px;
                     border:2px solid rgba(27,27,27,1);
                     opacity:1;
                     font-size:14px;
                     font-family:Microsoft YaHei;
                     font-weight:400;
-                    line-height:19px;
+                    line-height:17px;
                     color:rgba(5,5,5,1);
                     opacity:1;
-                    margin-top:18px;
+                    margin-top:16px;
                     }           
 </style>

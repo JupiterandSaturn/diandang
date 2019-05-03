@@ -1,18 +1,22 @@
 <template>
     <div>
-       
+       <Head></Head>
        <Central/>
-       
+       <Foot></Foot>
     </div>
 </template>
 
 <script>
+import Head from '@/components/currency/page-top.vue'
 import Central from './central'
+import Foot from '@/components/currency/page-bottom.vue'
+
 
 export default {
                 components:{
-                
-                    Central
+                    Head,
+                    Central,
+                    Foot
                         }
 }
 </script>

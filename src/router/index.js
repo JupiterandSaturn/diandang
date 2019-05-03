@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import AboutUs from '../views/aboutUs/index.vue'
-<<<<<<< HEAD
 import Home from '../components/homepage/index.vue'
 import Login from '@/views/Login.vue'
 import OrderPerson from "@/views/OrderPerson.vue"
@@ -10,16 +9,12 @@ import Index from '../views/Index/index.vue'
 import Success from '../views/Success/Success.vue'
 import Second from '../views/Second/index.vue'
 import Third from '../views/third/index.vue'
-=======
 import ConfigurationSelection from '../views/ConfigurationSelection/index.vue'
 import Evaluation from '../views/Evaluation/index.vue'
 // import Home from '../components/homepage/index.vue'
-import Login from '@/views/Login.vue'
-import OrderPerson from "@/views/OrderPerson.vue"
-import Shopcar from '../views/shopcar/shopcar.vue'
-import index from '@/views/Index/index.vue'
-import Success from '../views/Success/Success.vue'
->>>>>>> e4be65c317689ce24d3bd017597bc926f7cb889d
+
+
+
 
 Vue.use(Router)
 
@@ -33,20 +28,15 @@ export default new Router({
       component: function () {
         return import(/* webpackChunkName: "coupon" */ '@/views/About.vue')
       }
-<<<<<<< HEAD
+
       },
       {
       name:"index",
       path:"/index",
       component: Index
-=======
->>>>>>> e4be65c317689ce24d3bd017597bc926f7cb889d
+
     },
-    {
-      name:"index",
-      path:"/index",
-      component: index
-    },
+  
     {
       name:"login",
       path:"/login",
@@ -119,11 +109,7 @@ export default new Router({
       }
     },
      
-    {
-      name:"shopcar",
-      path:"/shopcar",
-      component: Shopcar
-    },
+ 
     {
       path:'/',
       redirect:'index'
@@ -148,13 +134,8 @@ export default new Router({
       }
     },
     {
-<<<<<<< HEAD
-      name:'Third',
-      path:'/third',
-      component:Third
-    }
-    ]
-=======
+
+
       path: '/third',
       name: 'third',
       component: function () {
@@ -164,5 +145,5 @@ export default new Router({
 
 
   ]
->>>>>>> e4be65c317689ce24d3bd017597bc926f7cb889d
+
 })

@@ -1,20 +1,26 @@
 <template>
     <div class='shopcar'>
         <div class='main'>
+          <Head></Head>
             <Left class="main_left"></Left>
             <Right class="main_right"></Right>
+            <Foot></Foot>
         </div>
     </div>
 </template>
 
 <script scope>
+import Head from '@/components/currency/page-top.vue'
 import Left from './left/left.vue'
 import Right from './right/right.vue'
+import Foot from '@/components/currency/page-bottom.vue'
 
 export default {
   name: 'app',
   components: {
-    Left,Right
+    Head,
+    Left,Right,
+    Foot
   }
 }
 </script>
@@ -42,27 +48,26 @@ export default {
       width: 100%;
 }
 .shopcar{
-      height:961px;
+      height:832.5px;
       width:100%;
       display: inline-block;
      }
 .shopcar .main{
-              width:1330px;
-              height:925px;
+              width:1200px;
+              // height:832.5px;
               background:rgba(231,231,231,1);
               opacity:1;
               margin:0 auto;
-              margin-top:18px;
               }
 .shopcar .main_left{
-                 width:859px;
-                 height:925px;
+                 width:773px;
+                 height:832.5px;
                  float:left;
-                 margin-left:33px;
+                 margin-left:30px;
                  } 
 .shopcar .main_right{
-                  width:399px;
-                  height:925px;
+                  width:359px;
+                  height:832.5px;
                   float:right;
                   margin-right:38px;
                  }  

@@ -29,31 +29,32 @@ export default {
 </script>
 <style scope>
 .right_btm .one{
-                          width:399px;
-                          height:67px;
+                          width:359px;
+                          height:60px;
                           border-bottom:1px solid rgba(200,200,200,1);
                           opacity:1;
                           margin:0 auto;
                         }
 .right_btm .one p{
                             width:56px;
-                            height:19px;
+                            height:17px;
                             font-size:14px;
                             font-family:Microsoft YaHei;
                             font-weight:400;
-                            line-height:19px;
+                            line-height:17px;
                             color:rgba(27,27,27,1);
                             opacity:1;
-                            margin-left:187px;
-                            line-height: 67px;
-                            text-align: center;
+                            margin-left:140px;
+                            padding:22px;
+                        
                           }  
                     
 .right_btm .two{
-                          width:399px;
-                          height:68px;
+                          width:359px;
+                          height:61px;
                           border-bottom:1px solid rgba(200,200,200,1);
                           opacity:1;
+                          /* margin-bottom:73px; */
                          }  
 .right_btm .two span{
                             display: inline-block;
@@ -63,19 +64,19 @@ export default {
                             line-height:19px;
                             color:rgba(135,135,135,1);
                             opacity:1;
-                            margin-left:57px;
-                            padding-top:24px;
+                            margin-left:51px;
+                            padding-top:22px;
                           } 
 .right_btm .two a{
-                   margin-left:237px;
+                   margin-left:205px;
                    width:10px;
                     height:0px;
                     /* border:2px solid rgba(112,112,112,1); */
                     opacity:1;
                   }                                              
 .right_btm .three{
-                          width:399px;
-                          height:64px;
+                          width:359px;
+                          height:58px;
                           border-bottom:1px solid rgba(200,200,200,1);
                           opacity:1;
                           } 
@@ -84,22 +85,22 @@ export default {
                             font-size:14px;
                             font-family:Microsoft YaHei;
                             font-weight:400;
-                            line-height:19px;
+                            line-height:17px;
                             color:rgba(135,135,135,1);
                             opacity:1;
-                            margin-left:57px;
-                            padding-top:22px;
+                            margin-left:51px;
+                            padding-top:20px;
                           } 
 .right_btm .three a{
-                   margin-left:244px;
+                   margin-left:220px;
                    width:10px;
                     height:0px;
                     /* border:2px solid rgba(112,112,112,1); */
                     opacity:1;
                   }                          
 .right_btm .four{
-                          width:399px;
-                          height:68px;
+                          width:359px;
+                          height:61px;
                           border-bottom:1px solid rgba(200,200,200,1);
                           opacity:1;
                          } 
@@ -111,19 +112,19 @@ export default {
                           line-height:19px;
                           color:rgba(135,135,135,1);
                           opacity:1;
-                          margin-left:57px;
-                          padding-top:25px;
+                          margin-left:51px;
+                          padding-top:22.5px;
                         } 
 .right_btm .four a{
-                   margin-left:230px;
+                   margin-left:207px;
                    width:10px;
                     height:0px;
                     /* border:2px solid rgba(112,112,112,1); */
                     opacity:1;
                   }                                                 
 .right_btm .five{
-                          width:399px;
-                          height:66px;
+                          width:359px;
+                          height:59px;
                           border-bottom:1px solid rgba(200,200,200,1);
                           opacity:1;
                           } 
@@ -132,14 +133,14 @@ export default {
                             font-size:14px;
                             font-family:Microsoft YaHei;
                             font-weight:400;
-                            line-height:19px;
+                            line-height:17px;
                             color:rgba(135,135,135,1);
                             opacity:1;
-                            margin-left:57px;
-                            padding-top:24px;
+                            margin-left:51px;
+                            padding-top:22px;
                           } 
 .right_btm .five a{
-                   margin-left:230px;
+                   margin-left:207px;
                    width:10px;
                     height:0px;
                     /* border:2px solid rgba(112,112,112,1); */
