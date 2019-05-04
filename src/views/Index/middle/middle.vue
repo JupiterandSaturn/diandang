@@ -1,40 +1,31 @@
 <template>
+
    <div class='middle'>
-       <div class='one'>
-          <img src='../../../../public/images/imgPersonal/sy.png'>
-          <span>手机典当</span>
-       </div>
-        
-       <div class='two'>
-          <img src='../../../../public/images/imgPersonal/pb.png'>
-          <span>手机典当</span>
-       </div>
-        
-       <div class='three'>
-           <img src='../../../../public/images/imgPersonal/sj.png'>
-           <span>手机典当</span>
-       </div>
-   
-       <div class='four'>
-          <img src='../../../../public/images/imgPersonal/sm.png'>
-          <span>手机典当</span>
-       </div>
-             
-       <div class='five'>
-          <img src='../../../../public/images/imgPersonal/sy.png'>
-          <span>手机典当</span>
-       </div>
-      
+         <div v-for="item in $store.state.HomePage.imagelist" @click='jumpSecond'>
+          <img :src="item.image" >
+          <span>{{item.typeName}}典当</span>
+       </div> 
+              
    </div> 
 </template>
 <script>
 export default {
-    
+  // 点击跳转到第二页面
+      methods:{
+          jumpSecond(typeName){
+            this.$router.push({path:'/second',query:{typeName}})
+          }
+               },
+
+       mounted() {
+            this.$store.dispatch("getIndex");
+  
+    },
 }
 </script>
 <style scope>
 .middle{
-        width:1330px;
+        width:1200px;
         height:652px;
         background:rgba(231,231,231,1);
         opacity:1;
@@ -42,90 +33,90 @@ export default {
         margin:0 auto;
         margin-top:134px;
        }
-.middle .one{
+.middle div:nth-of-type(1){
               width:275px;
               height:202px;
-              margin-left:198px;
+              margin-left:165px;
               margin-top:58px;
               position:absolute;
            }
-.middle .one img{
+.middle div:nth-of-type(1) img{
                     width:275px;
                     height:164px;               
                     border:1px dotted grey;
                     }
-.middle .one span{
+.middle div:nth-of-type(1) span{
                   padding-top:12px;
                   margin:0 auto;
                   }                    
-.middle .two{
+.middle div:nth-of-type(2){
               width:275px;
               height:223px;
-              margin-left:198px;
+              margin-left:165px;
               margin-top:383px;
               position:absolute;
             }                    
-.middle .two img{
+.middle div:nth-of-type(2) img{
               width:275px;
               height:164px;
               border:1px dotted grey;
              } 
-.middle .two span{
+.middle div:nth-of-type(2) span{
                   padding-top:33px;
                   margin:0 auto;
                   }    
-.middle .three{
+.middle div:nth-of-type(3){
                width:276px;
               height:548px;
-              margin-left:527px;
+              margin-left:462px;
               margin-top:58px;
               position:absolute;
              }
-.middle .three img{
+.middle div:nth-of-type(3) img{
               width:276px;
               height:489px;
              border:1px dotted grey;
 
              }
-.middle .three span{
+.middle div:nth-of-type(3) span{
                   padding-top:33px;
                   margin:0 auto;
                   }
-.middle .four{
+.middle div:nth-of-type(4){
               width:275px;
               height:202px;
-              margin-left:857px;
+              margin-left:760px;
               margin-top:58px;
               position:absolute;
 }            
-.middle .four img{
+.middle div:nth-of-type(4) img{
               width:275px;
               height:164px;
               border:1px dotted grey;
              }
-.middle .four span{
+.middle div:nth-of-type(4) span{
                   padding-top:12px;
                   margin:0 auto;
                   }
-.middle .five{
+.middle div:nth-of-type(5){
               width:275px;
               height:223px;
-               margin-left:857px;
+               margin-left:760px;
               margin-top:383px;
               position:absolute;
 }
-.middle .five img{
+.middle div:nth-of-type(5) img{
               width:275px;
               height:164px;
               border:1px dotted grey;
              }
-.middle .five span{
+.middle div:nth-of-type(5) span{
                   padding-top:33px;
                   margin:0 auto;
                   }
 .middle span{
                 display: block;
-                width:80px;
+                width:120px;
                 height:26px;
                 font-size:20px;
                 font-weight:400;

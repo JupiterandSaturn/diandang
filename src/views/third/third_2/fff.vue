@@ -1,10 +1,20 @@
 <template>
      <div id="logo-info-more">
-            <input type="button" value="加载更多">
+            <input type="button" value="加载更多" @click='moreChange'>
     </div> 
 </template>
 <script>
 export default {
+    methods:{
+         moreChange(){
+             this.offset+=2;
+               this.$store.dispatch("getMiddle",{limit:8,offset:this.offset,typeId:this.$store.state.second.goodslist[0].typeId}); 
+         },
+    },
+        mounted() {
+        this.$store.dispatch('getMiddleFff')
+        // this.$store.dispatch("getMiddleIndex");
+    },
     
 }
 </script>

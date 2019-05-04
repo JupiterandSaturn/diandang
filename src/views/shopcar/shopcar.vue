@@ -1,20 +1,26 @@
 <template>
-    <div class='main'>
-        <div class='main_1'>
+    <div class='shopcar'>
+        <div class='main'>
+          <Head></Head>
             <Left class="main_left"></Left>
             <Right class="main_right"></Right>
+            <Foot></Foot>
         </div>
     </div>
 </template>
 
 <script scope>
+import Head from '@/components/currency/page-top.vue'
 import Left from './left/left.vue'
 import Right from './right/right.vue'
+import Foot from '@/components/currency/page-bottom.vue'
 
 export default {
   name: 'app',
   components: {
-    Left,Right
+    Head,
+    Left,Right,
+    Foot
   }
 }
 </script>
@@ -24,45 +30,44 @@ export default {
     margin:0;
     padding:0;
   }
-ul li{
+.shopcar ul li{
     text-decoration: none;
     list-style:none;
     float:left;
   }
-ol li{
+.shopcar ol li{
    text-decoration: none;
    list-style:none;
    float:left;
  }
   
-a{
+.shopcar a{
  text-decoration:none;
 }
 .body{
       width: 100%;
 }
-.main{
-      height:961px;
+.shopcar{
+      height:832.5px;
       width:100%;
       display: inline-block;
      }
-.main .main_1{
-              width:1330px;
-              height:925px;
+.shopcar .main{
+              width:1200px;
+              // height:832.5px;
               background:rgba(231,231,231,1);
               opacity:1;
               margin:0 auto;
-              margin-top:18px;
               }
-.main_left{
-                 width:859px;
-                 height:925px;
+.shopcar .main_left{
+                 width:773px;
+                 height:832.5px;
                  float:left;
-                 margin-left:33px;
+                 margin-left:30px;
                  } 
-.main_right{
-                  width:399px;
-                  height:925px;
+.shopcar .main_right{
+                  width:359px;
+                  height:832.5px;
                   float:right;
                   margin-right:38px;
                  }  

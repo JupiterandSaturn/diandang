@@ -1,19 +1,24 @@
 <template>
-    <div class='rg_btm'>
+    <div class='right_btm'>
         <div class='one'>
             <p>免费配送</p>
+            
         </div>
         <div class='two'>
-            <p>需要帮助？</p>
+            <span>需要帮助？</span>
+            <a href='#'>+</a>
         </div>
         <div class='three'>
-            <p>退款方式</p>
+            <span>退款方式</span>
+            <a href='#'>+</a>
         </div>
         <div class='four'>
-            <p>退换货政策</p>
+            <span>退换货政策</span>
+            <a href='#'>+</a>
         </div>
         <div class='five'>
-            <p>取件方式</p>
+            <span>退换货政策</span>
+            <a href='#'>+</a>
         </div>
    </div>
 </template>
@@ -23,88 +28,123 @@ export default {
             }
 </script>
 <style scope>
-.rg_btm .one{
-                          width:399px;
-                          height:67px;
+.right_btm .one{
+                          width:359px;
+                          height:60px;
                           border-bottom:1px solid rgba(200,200,200,1);
                           opacity:1;
+                          margin:0 auto;
                         }
-.rg_btm .one p{
+.right_btm .one p{
                             width:56px;
-                            height:19px;
+                            height:17px;
                             font-size:14px;
                             font-family:Microsoft YaHei;
                             font-weight:400;
-                            line-height:19px;
+                            line-height:17px;
                             color:rgba(27,27,27,1);
                             opacity:1;
-                            margin-left:187px;
-                            line-height: 67px;
-                            text-align: center;
-                          }                       
-.rg_btm .two{
-                          width:399px;
-                          height:68px;
+                            margin-left:140px;
+                            padding:22px;
+                        
+                          }  
+                    
+.right_btm .two{
+                          width:359px;
+                          height:61px;
                           border-bottom:1px solid rgba(200,200,200,1);
                           opacity:1;
+                          /* margin-bottom:73px; */
                          }  
-.rg_btm .two p{
+.right_btm .two span{
+                            display: inline-block;
                             font-size:14px;
                             font-family:Microsoft YaHei;
                             font-weight:400;
                             line-height:19px;
                             color:rgba(135,135,135,1);
                             opacity:1;
-                            margin-left:57px;
-                            padding-top:24px;
-                          }                                              
-.rg_btm .three{
-                          width:399px;
-                          height:64px;
-                          border-bottom:1px solid rgba(200,200,200,1);
-                          opacity:1;
-                          } 
-.rg_btm .three p{
-                            font-size:14px;
-                            font-family:Microsoft YaHei;
-                            font-weight:400;
-                            line-height:19px;
-                            color:rgba(135,135,135,1);
-                            opacity:1;
-                            margin-left:57px;
+                            margin-left:51px;
                             padding-top:22px;
                           } 
-.rg_btm .four{
-                          width:399px;
-                          height:68px;
+.right_btm .two a{
+                   margin-left:205px;
+                   width:10px;
+                    height:0px;
+                    /* border:2px solid rgba(112,112,112,1); */
+                    opacity:1;
+                  }                                              
+.right_btm .three{
+                          width:359px;
+                          height:58px;
+                          border-bottom:1px solid rgba(200,200,200,1);
+                          opacity:1;
+                          } 
+.right_btm .three span{
+                            display: inline-block;
+                            font-size:14px;
+                            font-family:Microsoft YaHei;
+                            font-weight:400;
+                            line-height:17px;
+                            color:rgba(135,135,135,1);
+                            opacity:1;
+                            margin-left:51px;
+                            padding-top:20px;
+                          } 
+.right_btm .three a{
+                   margin-left:220px;
+                   width:10px;
+                    height:0px;
+                    /* border:2px solid rgba(112,112,112,1); */
+                    opacity:1;
+                  }                          
+.right_btm .four{
+                          width:359px;
+                          height:61px;
                           border-bottom:1px solid rgba(200,200,200,1);
                           opacity:1;
                          } 
-.rg_btm .four p{
+.right_btm .four span{
+                           display: inline-block;
                           font-size:14px;
                           font-family:Microsoft YaHei;
                           font-weight:400;
                           line-height:19px;
                           color:rgba(135,135,135,1);
                           opacity:1;
-                          margin-left:57px;
-                          padding-top:25px;
-                        }                          
-.rg_btm .five{
-                          width:399px;
-                          height:66px;
+                          margin-left:51px;
+                          padding-top:22.5px;
+                        } 
+.right_btm .four a{
+                   margin-left:207px;
+                   width:10px;
+                    height:0px;
+                    /* border:2px solid rgba(112,112,112,1); */
+                    opacity:1;
+                  }                                                 
+.right_btm .five{
+                          width:359px;
+                          height:59px;
                           border-bottom:1px solid rgba(200,200,200,1);
                           opacity:1;
                           } 
-.rg_btm .five p{
+.right_btm .five span{
+                           display: inline-block;
                             font-size:14px;
                             font-family:Microsoft YaHei;
                             font-weight:400;
-                            line-height:19px;
+                            line-height:17px;
                             color:rgba(135,135,135,1);
                             opacity:1;
-                            margin-left:57px;
-                            padding-top:24px;
-                          }                          
+                            margin-left:51px;
+                            padding-top:22px;
+                          } 
+.right_btm .five a{
+                   margin-left:207px;
+                   width:10px;
+                    height:0px;
+                    /* border:2px solid rgba(112,112,112,1); */
+                    opacity:1;
+                  }                                                   
 
 </style>

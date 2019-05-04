@@ -1,6 +1,6 @@
 <template>
-     <div class='middle'>
-        <ul>
+     <div class='left_middle'>
+        <ol>
             <li><input class='two' type='checkbox'></li>
             <li><div class='nav'></div></li>
             <li>
@@ -14,51 +14,31 @@
             <li><span class='sp2'></span></li>
             <li><input class='three' type='text' value="数量"></li>               
             <li><span class='sp3'>总价</span></li>
-        </ul>
+        </ol>
     </div>
 </template>
 <script>
 export default {
-    name:'middle',
-    data(){
-          return{
-             message:[
-                 {
-                    type,
-                    year,
-                    name,
-                    revise,
-                    delet,
-                 },
-                 {
-                    type,
-                    year,
-                    name,
-                    revise,
-                    delet,
-                 },
-             ]
-                }
-           }
+    name:'middle'
         }
 </script>
 <style scope>
-.middle ul .two{
+.left_middle ol .two{
                     width:18px;
                     height:18px;
-                    background:rgba(255,255,255,1);
+                    /* background:rgba(255,255,255,1); */
                     opacity:1; 
-                    margin-left:33px;
-                    margin-top:55px;
+                    margin-left:30px;
+                    margin-top:49.5px;
                     } 
-.middle .nav{
-                width:219px;
-                height:324px;
+.left_middle ol .nav{
+                width:197px;
+                height:292px;
                 border:1px dashed;
-                margin-left:19px;
-                margin-top:10px;
+                margin-left:17px;
+                margin-top:9px;
                 } 
-.middle ul li h6{
+.left_middle ol li h6{
                     width:28px;
                     height:19px;
                     font-size:14px;
@@ -69,9 +49,9 @@ export default {
                     opacity:1;
                     margin-top:74px;
                     } 
-.middle ul .mid_1{
-                    width:90px;
-                    height:19px;
+.left_middle ol .mid_1{
+                    width:81px;
+                    height:17px;
                     font-size:14px;
                     font-family:Microsoft YaHei;
                     font-weight:400;
@@ -79,9 +59,9 @@ export default {
                     color:rgba(135,135,135,1);
                     opacity:1;
                 } 
-.middle ul .mid_2{
-                    width:94px;
-                    height:19px;
+.left_middle ol .mid_2{
+                    width:85px;
+                    height:17px;
                     font-size:14px;
                     font-family:Microsoft YaHei;
                     font-weight:400;
@@ -89,42 +69,42 @@ export default {
                     color:rgba(135,135,135,1);
                     opacity:1;
                     } 
-.middle ul .mid_3{
-                    width:28px;
-                    height:19px;
+.left_middle ol .mid_3{
+                    /* width:25px; */
+                    height:17px;
                     font-size:14px;
                     font-family:Microsoft YaHei;
                     font-weight:400;
-                    line-height:19px;
+                    line-height:17px;
                     color:rgba(5,5,5,1);
                     opacity:1;
                     display: inline-block;
-                    margin-top:119px;
+                    margin-top:107px;
                 }
-.middle ul .mid_4{
-                    width:28px;
-                    height:19px;
+.left_middle ol .mid_4{
+                    width:25px;
+                    height:17px;
                     font-size:14px;
                     font-family:Microsoft YaHei;
                     font-weight:400;
-                    line-height:19px;
+                    line-height:17px;
                     color:rgba(5,5,5,1);
                     opacity:1;
-                    margin-top:119px;
+                    margin-top:107px;
                     } 
-.middle ul .sp1{
+.left_middle ol .sp1{
                     color:rgba(135,135,135,1);
                     }
 
-.middle ul .three{
-                        width:83px;
-                        height:44px;
+.left_middle ol .three{
+                        width:75px;
+                        height:40px;
                         border:1px solid rgba(200,200,200,1);
                         opacity:1;
-                        margin-left:12px;
-                        margin-top:66px;
+                        margin-left:11px;
+                        margin-top:59px;
                         }
-.middle .three::-webkit-input-value{ 
+.left_middle .three::-webkit-input-value{ 
                                         display: inline-block;
                                         margin:11px 31px 14px 12px;
                                         width:40px;
@@ -136,19 +116,19 @@ export default {
                                         color:rgba(5,5,5,1);
                                         opacity:1;
                                     }                          
-.middle .sp2{
+.left_middle .sp2{
                 display: inline-block;
                 width:0px;
                 height:85px;
                 border:1px solid rgba(200,200,200,1);
                 opacity:1;
-                margin-left:183px;
-                margin-top:66px;
+                margin-left:165px;
+                margin-top:59px;
                 }
-.middle .sp3{
+.left_middle .sp3{
                 display: inline-block;
-                width:87px;
-                height:26px;
+                width:78px;
+                height:23.5px;
                 font-size:20px;
                 font-family:Microsoft YaHei;
                 font-weight:400;

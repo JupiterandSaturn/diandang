@@ -17,6 +17,7 @@ export default {
 
 <style scoped>
     #nav{
+        padding:30px 0;
         width:100%;
         height:132px;
         text-align:center;

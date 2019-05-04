@@ -1,45 +1,46 @@
 <template>
     <div class='main'>
        <div class='main_1'>
-         <ul>
-               <li>
-                    <img src="../../../../public/images/imgPersonal/11.png" alt="">
-                    <p>手机</p>
+           <ul>
+                <li v-for="(item,index) in $store.state.second.typename" :key="index" @click="handleRouter(item.typeId)">
+                    <img :src=item.image >
+                    <p @mousedown="fn($event)" @mouseup="fn1($event)" ref="ppp">{{item.typeName}}</p> 
                 </li>
-                <li>
-                    <img src="../../../../public/images/imgPersonal/11.png" alt="">
-
-                    <p>平板电脑</p>
-                </li>
-                <li>
-                    <img src="../../../../public/images/imgPersonal/11.png" alt="">
-
-                    <p>笔记本</p>
-                </li>
-                <li>
-                    <img src="../../../../public/images/imgPersonal/11.png" alt="">
-
-                    <p>摄影摄像</p>
-                </li>
-                <li>
-                    <img src="../../../../public/images/imgPersonal/11.png" alt="">
-
-                    <p>智能数码</p>
-                </li>
-          </ul>
+           </ul> 
        </div>
     </div>
 </template>
 <script>
+
 export default {
-    
+    data(){
+        return{
+        //   isshow: true
+        }
+    },
+         mounted(){
+             this.$store.dispatch('getTop')
+         },
+         methods:{
+           handleRouter(id){
+               this.$store.dispatch("getMiddle",{limit:8,offset:0,typeId:id})
+             } ,
+            fn(e){
+                e.target.style.color="red"
+            },
+            fn1(e){
+                e.target.style.color="#707070"
+            }
+         
+         }
+        
 }
 </script>
 <style scope>
-.main{
+/* .main{
     background: white;
     overflow: hidden;
-}
+} */
 .main .main_1{
     width: 1200px;
     margin: 0 auto;
@@ -61,11 +62,6 @@ export default {
     color: #878787;
     margin-top: 31px;
     margin-bottom: 10px;
-}
-.main .main_1 ul li:nth-of-type(3){
-
-    color: #1B1B1B;
-
 }
 .main .main_1 ul li img{
     height: 56px;

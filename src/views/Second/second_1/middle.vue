@@ -1,75 +1,43 @@
 <template>
      <div id="logo-list">
+         
             <ul>
-                <li>
+                <li v-for="(item,index) in $store.state.second.goodslist" :key="index" @click="handeleDetail(item.typeId,item.brandId)">
                    <i>
-                       <img src="../../../../public/images/imgPersonal/11.png" alt=""><span></span>
-
-                   </i>
-
-                </li>
-                <li>
-                    <i>
-                        <img src="../../../../public/images/imgPersonal/11.png" alt=""><span></span>
-
-                    </i>
-
-                </li>
-                <li>
-                    <i>
-                        <img src="../../../../public/images/imgPersonal/11.png" alt=""><span></span>
-
-                    </i>
-
-                </li>
-                <li>
-                    <i>
-                        <img src="../../../../public/images/imgPersonal/11.png" alt=""><span></span>
-
-                    </i>
-
-                </li>
-                <li>
-                    <i>
-                        <img src="../../../../public/images/imgPersonal/11.png" alt=""><span></span>
-
-                    </i>
-
-                </li>
-                <li>
-                    <i>
-                        <img src="../../../../public/images/imgPersonal/11.png" alt=""><span></span>
-
-                    </i>
-
-                </li>
-                <li>
-                    <i>
-                        <img src="../../../../public/images/imgPersonal/11.png" alt=""><span></span>
-
-                    </i>
-
-                </li>
-                <li>
-                    <i>
-                        <img src="../../../../public/images/imgPersonal/11.png" alt=""><span></span>
-
-                    </i>
-
-                </li>
-
+                      <img :src="item.brandAddress"><span></span> 
+                  </i>
+                    <p>{{item.typeName}}</p> 
+                </li> 
             </ul>
-          
             <div id="logo-info-more">
-                <input type="button" value="加载更多">
+                <input type="button" value="加载更多" @click="moreChange">
             </div>
         </div> 
 </template>
 
 <script>
 export default {
-    
-           }
+     data(){
+         return{
+            offset:0,
+         }
+     },
+     methods:{
+         moreChange(){
+             this.offset+=2;
+               this.$store.dispatch("getMiddle",{limit:8,offset:this.offset,typeId:this.$store.state.second.goodslist[0].typeId}); 
+         },
+         handeleDetail(typeid,brandid){
+             this.$router.push({path:'/third',query:{typeid,brandid}})
+         }
+         
+
+     },
+      mounted(){
+           this.$store.dispatch("getMiddle",{limit:8,offset:0,typeId:1});
+           this.$store.dispatch("getMiddleIndex");  
+      }
+}
 </script>
 
 <style scope>
@@ -138,6 +106,7 @@ export default {
     background: #E7E7E7;
     height:110px;
     line-height: 110px;
+    clear:both;
 }
 #logo-info-more input{
     width: 187px;
@@ -147,4 +116,5 @@ export default {
     font-size: 14px;
     color: #E5DFD9;
 } 
+
 </style>
